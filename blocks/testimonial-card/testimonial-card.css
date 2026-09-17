@@ -1,0 +1,50 @@
+.testimonial-card.block {
+  margin: 2rem auto;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 10%);
+  padding: 2rem;
+  text-align: center;
+}
+
+.testimonial-card-photo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card-photo picture > img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-card-quote {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: #333;
+}
+
+.testimonial-card-quote::before {
+  content: '\201C';
+}
+
+.testimonial-card-quote::after {
+  content: '\201D';
+}
+
+.testimonial-card-name {
+  margin: 0;
+  font-weight: 600;
+  color: #025be8;
+}
+
+.testimonial-card-role {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}

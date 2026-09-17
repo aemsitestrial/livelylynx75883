@@ -15,7 +15,63 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "banner",
+      "testimonial-card",
+      "employee-data",
+      "teaser",
+      "employee-form",
+      "product-catalog",
+      "promo-banner",
+      "event-card",
+      "product-feature",
+      "author-profile",
+      "faq-list",
+      "download-panel",
+      "pricing-table",
+      "article-meta",
+      "media-gallery",
+      "content-spotlight",
+      "card",
+      "slider",
+      "blog-list",
+      "header-infodales",
+      "molecular-footer",
+      "form-builder",
+      "custom-columns",
+      "trip-booking-form",
+      "brand-footer"
+    ]
+  },
+  {
+    "id": "article-meta",
+    "components": [
+      "article-meta"
+    ]
+  },
+  {
+    "id": "author-profile",
+    "components": [
+      "author-profile"
+    ]
+  },
+  {
+    "id": "banner",
+    "components": [
+      "banner"
+    ]
+  },
+  {
+    "id": "blog-list",
+    "components": [
+      "blog-list"
+    ]
+  },
+  {
+    "id": "brand-footer",
+    "components": [
+      "brand-footer-link",
+      "brand-footer-logo"
     ]
   },
   {
@@ -37,6 +93,117 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "content-spotlight",
+    "components": [
+      "content-spotlight"
+    ]
+  },
+  {
+    "id": "custom-columns",
+    "components": [
+      "custom-columns-item"
+    ]
+  },
+  {
+    "id": "custom-columns-item",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
+    "id": "download-panel",
+    "components": [
+      "download-panel"
+    ]
+  },
+  {
+    "id": "employee-data",
+    "components": [
+      "employee-data"
+    ]
+  },
+  {
+    "id": "employee-form",
+    "components": [
+      "employee-form"
+    ]
+  },
+  {
+    "id": "event-card",
+    "components": [
+      "event-card"
+    ]
+  },
+  {
+    "id": "faq-list",
+    "components": [
+      "faq-list"
+    ]
+  },
+  {
+    "id": "form-builder",
+    "components": [
+      "form-field"
+    ]
+  },
+  {
+    "id": "media-gallery",
+    "components": [
+      "media-gallery"
+    ]
+  },
+  {
+    "id": "molecular-footer",
+    "components": [
+      "footer-item"
+    ]
+  },
+  {
+    "id": "pricing-table",
+    "components": [
+      "pricing-table"
+    ]
+  },
+  {
+    "id": "product-catalog",
+    "components": [
+      "product-catalog"
+    ]
+  },
+  {
+    "id": "product-feature",
+    "components": [
+      "product-feature"
+    ]
+  },
+  {
+    "id": "promo-banner",
+    "components": [
+      "promo-banner"
+    ]
+  },
+  {
+    "id": "slider",
+    "components": [
+      "slide"
+    ]
+  },
+  {
+    "id": "testimonial-card",
+    "components": [
+      "testimonial-card"
+    ]
+  },
+  {
+    "id": "trip-booking-form",
+    "components": [
+      "trip-booking-form"
     ]
   }
 ]

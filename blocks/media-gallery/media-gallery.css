@@ -1,0 +1,11 @@
+.media-gallery {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.media-gallery > div {
+  margin: 0;
+}

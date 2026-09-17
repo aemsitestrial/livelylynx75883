@@ -20,6 +20,40 @@
         "name": "keywords",
         "multi": true,
         "label": "Keywords"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "nav",
+        "label": "Header (Nav) Source",
+        "description": "Overrides the default /nav header for this page"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "footer",
+        "label": "Footer Source",
+        "description": "Overrides the default /footer for this page"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "hide-nav",
+        "label": "Hide Header",
+        "description": "Hides the header/nav entirely on this page"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "hide-footer",
+        "label": "Hide Footer",
+        "description": "Hides the footer entirely on this page"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "template",
+        "label": "Template"
       }
     ]
   },
@@ -142,6 +176,188 @@
     ]
   },
   {
+    "id": "article-meta",
+    "fields": [
+      {
+        "component": "text",
+        "name": "category",
+        "label": "Category",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "author",
+        "label": "Author",
+        "valueType": "string"
+      },
+      {
+        "component": "date-time",
+        "name": "publishDate",
+        "label": "Publish date",
+        "valueType": "date",
+        "required": true
+      },
+      {
+        "component": "aem-tag",
+        "name": "tags",
+        "label": "Tags",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "author-profile",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "photo",
+        "label": "Profile photo",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "name",
+        "label": "Author name",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "aem-content-fragment",
+        "name": "authorFragment",
+        "label": "Author Content Fragment",
+        "valueType": "string",
+        "variationName": "authorVariation",
+        "validation": {
+          "rootPath": "/content/dam/your-site/content-fragments"
+        }
+      },
+      {
+        "component": "aem-experience-fragment",
+        "name": "authorExperience",
+        "label": "Author Experience Fragment",
+        "valueType": "string",
+        "variationName": "authorExperienceVariation",
+        "validation": {
+          "rootPath": "/content/experience-fragments/your-site"
+        }
+      }
+    ]
+  },
+  {
+    "id": "banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt Text",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Button Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Button Text"
+      }
+    ]
+  },
+  {
+    "id": "blog-list",
+    "fields": [
+      {
+        "component": "text",
+        "name": "indexPath",
+        "label": "Index path",
+        "value": "/blog/query-index.json",
+        "valueType": "string"
+      },
+      {
+        "component": "number",
+        "name": "limit",
+        "label": "Number of posts",
+        "value": 6,
+        "valueType": "number"
+      },
+      {
+        "component": "text",
+        "name": "category",
+        "label": "Filter by category (optional)",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "brand-footer-link",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Link Text"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "external",
+        "label": "Opens in new tab"
+      }
+    ]
+  },
+  {
+    "id": "brand-footer-logo",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Logo"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "alt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "link",
+        "label": "Link (optional)"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -152,11 +368,29 @@
         "multi": false
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title"
+      },
+      {
         "component": "richtext",
-        "name": "text",
+        "valueType": "string",
+        "name": "description",
         "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "label": "Description"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "link",
+        "label": "Link URL"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "linkText",
+        "label": "Link Text"
       }
     ]
   },
@@ -176,6 +410,347 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "classes",
+        "label": "Variant",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Image + Text",
+            "value": "image-text"
+          },
+          {
+            "name": "Text + CTA",
+            "value": "text-cta"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "content-spotlight",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "contentFragment",
+        "label": "Content Fragment",
+        "valueType": "string",
+        "variationName": "variation",
+        "validation": {
+          "rootPath": "/content/dam/your-site/content-fragments"
+        }
+      },
+      {
+        "component": "aem-experience-fragment",
+        "name": "experienceFragment",
+        "label": "Experience Fragment",
+        "valueType": "string",
+        "variationName": "variation",
+        "validation": {
+          "rootPath": "/content/experience-fragments/crosswalkplg"
+        }
+      },
+      {
+        "component": "richtext",
+        "name": "intro",
+        "label": "Intro text",
+        "valueType": "string"
+      },
+      {
+        "component": "radio-group",
+        "name": "alignment",
+        "label": "Alignment",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Center",
+            "value": "center"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "custom-columns",
+    "fields": [
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "classes",
+        "label": "Variant",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Image + Text",
+            "value": "image-text"
+          },
+          {
+            "name": "Text + CTA",
+            "value": "text-cta"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "download-panel",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "document",
+        "label": "Document / PDF",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Download title",
+        "valueType": "string"
+      },
+      {
+        "component": "textarea",
+        "name": "description",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "buttonStyle",
+        "label": "Button style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "Text link",
+            "value": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "employee-data",
+    "fields": [
+      {
+        "component": "text",
+        "name": "buttonLabel",
+        "label": "Button Label (optional)"
+      }
+    ]
+  },
+  {
+    "id": "employee-form",
+    "fields": [
+      {
+        "component": "text",
+        "name": "buttonLabel",
+        "label": "Submit Button Label(Optional)"
+      }
+    ]
+  },
+  {
+    "id": "event-card",
+    "fields": [
+      {
+        "component": "text",
+        "name": "eventName",
+        "label": "Event name",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "textarea",
+        "name": "summary",
+        "label": "Summary",
+        "valueType": "string"
+      },
+      {
+        "component": "date-time",
+        "name": "eventDate",
+        "label": "Event date",
+        "valueType": "date"
+      },
+      {
+        "component": "radio-group",
+        "name": "attendance",
+        "label": "Attendance",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "In person",
+            "value": "in-person"
+          },
+          {
+            "name": "Online",
+            "value": "online"
+          },
+          {
+            "name": "Hybrid",
+            "value": "hybrid"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "faq-list",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "container",
+        "name": "items",
+        "label": "FAQ items",
+        "multi": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "question",
+            "label": "Question",
+            "valueType": "string",
+            "required": true
+          },
+          {
+            "component": "richtext",
+            "name": "answer",
+            "label": "Answer",
+            "valueType": "string"
+          },
+          {
+            "component": "boolean",
+            "name": "openByDefault",
+            "label": "Open by default",
+            "valueType": "boolean"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "form-builder",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Form Title"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "description",
+        "value": "",
+        "label": "Description"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "buttonLabel",
+        "label": "Submit Button Label"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "actionUrl",
+        "label": "Form Action URL (where submissions are sent)"
+      }
+    ]
+  },
+  {
+    "id": "form-field",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "label": "Field label",
+        "required": true
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "type",
+        "label": "Field type",
+        "value": "text",
+        "options": [
+          {
+            "name": "Text",
+            "value": "text"
+          },
+          {
+            "name": "Email",
+            "value": "email"
+          },
+          {
+            "name": "Phone",
+            "value": "tel"
+          },
+          {
+            "name": "Number",
+            "value": "number"
+          },
+          {
+            "name": "Date",
+            "value": "date"
+          },
+          {
+            "name": "Textarea",
+            "value": "textarea"
+          },
+          {
+            "name": "Dropdown (select)",
+            "value": "select"
+          },
+          {
+            "name": "Radio buttons",
+            "value": "radio"
+          },
+          {
+            "name": "Checkbox",
+            "value": "checkbox"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "options",
+        "label": "Options / default value - comma-separated list for Dropdown & Radio (mark the default by starting it with *); for other field types just enter the default value here"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "required",
+        "label": "Required field"
       }
     ]
   },
@@ -186,6 +761,35 @@
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "header-infodales",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo",
+        "label": "Logo"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "navigation",
+        "label": "Navigation (use nested lists for dropdown items)"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "footerLinks",
+        "label": "Footer Links"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "copyright",
+        "label": "Copyright Text"
       }
     ]
   },
@@ -212,6 +816,394 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "media-gallery",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Gallery heading",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "layout",
+        "label": "Layout",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Grid",
+            "value": "grid"
+          },
+          {
+            "name": "Masonry",
+            "value": "masonry"
+          },
+          {
+            "name": "Carousel",
+            "value": "carousel"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "name": "mediaItems",
+        "label": "Media items",
+        "multi": true,
+        "fields": [
+          {
+            "component": "reference",
+            "name": "asset",
+            "label": "Asset",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "caption",
+            "label": "Caption",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "footer-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "pricing-table",
+    "fields": [
+      {
+        "component": "text",
+        "name": "planName",
+        "label": "Plan name",
+        "valueType": "string"
+      },
+      {
+        "component": "number",
+        "name": "price",
+        "label": "Price",
+        "valueType": "number",
+        "value": 0,
+        "validation": {
+          "numberMin": 0,
+          "numberMax": 100000
+        }
+      },
+      {
+        "component": "select",
+        "name": "billingCycle",
+        "label": "Billing cycle",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Monthly",
+            "value": "monthly"
+          },
+          {
+            "name": "Yearly",
+            "value": "yearly"
+          }
+        ]
+      },
+      {
+        "component": "checkbox-group",
+        "name": "included",
+        "label": "Included features",
+        "valueType": "string[]",
+        "options": [
+          {
+            "name": "Support",
+            "value": "support"
+          },
+          {
+            "name": "Analytics",
+            "value": "analytics"
+          },
+          {
+            "name": "API access",
+            "value": "api"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "product-catalog",
+    "fields": []
+  },
+  {
+    "id": "product-feature",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "productImage",
+        "label": "Product image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "productName",
+        "label": "Product name",
+        "valueType": "string"
+      },
+      {
+        "component": "number",
+        "name": "rating",
+        "label": "Rating",
+        "valueType": "number",
+        "value": 5,
+        "validation": {
+          "numberMin": 1,
+          "numberMax": 5,
+          "customErrorMsg": "Choose a rating from 1 to 5."
+        }
+      },
+      {
+        "component": "multiselect",
+        "name": "features",
+        "label": "Features",
+        "valueType": "string",
+        "maxSize": 3,
+        "options": [
+          {
+            "name": "Fast",
+            "value": "fast"
+          },
+          {
+            "name": "Secure",
+            "value": "secure"
+          },
+          {
+            "name": "Cloud",
+            "value": "cloud"
+          },
+          {
+            "name": "Mobile",
+            "value": "mobile"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "promo-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Banner Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "name": "message",
+        "label": "Message",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "theme",
+        "label": "Theme",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Light",
+            "value": "light"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          },
+          {
+            "name": "Accent",
+            "value": "accent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "slide",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description"
+      }
+    ]
+  },
+  {
+    "id": "teaser",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "body",
+        "label": "Body",
+        "valueType": "string"
+      },
+      {
+        "component": "container",
+        "name": "cta",
+        "label": "CTA",
+        "fields": [
+          {
+            "component": "aem-content",
+            "name": "link",
+            "label": "CTA Link",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "linkText",
+            "label": "CTA Text",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "testimonial-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "photo",
+        "label": "Photo",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "photoAlt",
+        "label": "Photo Alt Text"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "quote",
+        "value": "",
+        "label": "Quote"
+      },
+      {
+        "component": "text-input",
+        "name": "name",
+        "label": "Name",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "role",
+        "label": "Role / Company",
+        "value": "",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "trip-booking-form",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Form Title"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "description",
+        "value": "",
+        "label": "Description"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "buttonLabel",
+        "label": "Submit Button Label"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "actionUrl",
+        "label": "Form Action URL (where submissions are sent)"
+      }
+    ]
+  },
+  {
+    "id": "landing-page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "landing-page",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "article-page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "article-page",
+        "readOnly": true
       }
     ]
   }

@@ -1,0 +1,73 @@
+{
+  "definitions": [
+    {
+      "title": "Promo Banner",
+      "id": "promo-banner",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Promo Banner",
+              "model": "promo-banner"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "promo-banner",
+      "fields": [
+        {
+          "component": "reference",
+          "name": "image",
+          "label": "Banner Image",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "title",
+          "label": "Title",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "component": "richtext",
+          "name": "message",
+          "label": "Message",
+          "valueType": "string"
+        },
+        {
+          "component": "select",
+          "name": "theme",
+          "label": "Theme",
+          "valueType": "string",
+          "options": [
+            {
+              "name": "Light",
+              "value": "light"
+            },
+            {
+              "name": "Dark",
+              "value": "dark"
+            },
+            {
+              "name": "Accent",
+              "value": "accent"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "promo-banner",
+      "components": [
+        "promo-banner"
+      ]
+    }
+  ]
+}

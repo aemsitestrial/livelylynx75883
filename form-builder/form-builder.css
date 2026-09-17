@@ -1,0 +1,88 @@
+.form-builder {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+  border: 1px solid #dadada;
+  border-radius: 8px;
+}
+
+.form-builder-title {
+  margin: 0 0 8px;
+}
+
+.form-builder-description {
+  margin: 0 0 16px;
+  color: var(--dark-color);
+}
+
+.form-builder-empty {
+  color: var(--dark-color);
+  font-style: italic;
+}
+
+.form-builder-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-builder-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-builder-row label {
+  font-weight: 600;
+  font-size: var(--body-font-size-xs);
+}
+
+.form-builder-row input,
+.form-builder-row select,
+.form-builder-row textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: var(--body-font-size-xs);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-builder-row textarea {
+  resize: vertical;
+}
+
+.form-builder-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-builder-radio,
+.form-builder-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.form-builder-radio input,
+.form-builder-checkbox input {
+  width: auto;
+}
+
+.form-builder-btn {
+  align-self: flex-start;
+}
+
+.form-builder-status {
+  margin-top: 12px;
+  font-size: var(--body-font-size-xs);
+  color: var(--dark-color);
+  min-height: 1.2em;
+}
+
+.form-builder-error {
+  color: #c0392b;
+}

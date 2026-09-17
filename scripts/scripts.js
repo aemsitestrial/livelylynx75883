@@ -10,6 +10,8 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  getMetadata,
+  buildBlock,
 } from './aem.js';
 
 /**
@@ -59,12 +61,36 @@ async function loadFonts() {
 }
 
 /**
+ * Auto builds a hero block for landing-page template if missing.
+ * @param {Element} main The container element
+ */
+function buildHeroBlock(main) {
+  const firstSection = main.querySelector(':scope > div');
+  if (!firstSection) return;
+  const hasHero = firstSection.querySelector('.hero');
+  if (hasHero) return;
+
+  const h1 = firstSection.querySelector('h1');
+  const picture = firstSection.querySelector('picture');
+  // eslint-disable-next-line no-bitwise
+  if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
+    const section = document.createElement('div');
+    const heroBlock = buildBlock('hero', [[picture], [h1.parentElement]]);
+    section.append(heroBlock);
+    main.prepend(section);
+  }
+}
+
+/**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
-function buildAutoBlocks() {
+function buildAutoBlocks(main) {
   try {
-    // TODO: add auto block, if needed
+    const template = getMetadata('template');
+    if (template === 'landing-page') {
+      buildHeroBlock(main);
+    }
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
@@ -121,8 +147,28 @@ async function loadLazy(doc) {
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
 
-  loadHeader(doc.querySelector('header'));
-  loadFooter(doc.querySelector('footer'));
+  // allow authors to hide the header/footer per page via metadata
+  // ("Hide Header" / "Hide Footer" in the page properties)
+  const hideNav = getMetadata('hide-nav') === 'true';
+  const hideFooter = getMetadata('hide-footer') === 'true';
+
+  const headerEl = doc.querySelector('header');
+  if (headerEl) {
+    if (hideNav) {
+      headerEl.remove();
+    } else {
+      loadHeader(headerEl);
+    }
+  }
+
+  const footerEl = doc.querySelector('footer');
+  if (footerEl) {
+    if (hideFooter) {
+      footerEl.remove();
+    } else {
+      loadFooter(footerEl);
+    }
+  }
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();

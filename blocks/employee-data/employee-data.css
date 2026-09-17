@@ -1,0 +1,51 @@
+.employee-data {
+    padding: 24px;
+}
+
+.employee-data-btn {
+    padding: 10px 20px;
+    background: #1473e6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.employee-data-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.employee-data-status {
+    margin-top: 8px;
+    color: #555;
+    font-size: 13px;
+}
+
+.employee-data-error {
+    color: #c0392b;
+}
+
+.employee-data-grid {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.employee-data-grid th,
+.employee-data-grid td {
+    border: 1px solid #e0e0e0;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.employee-data-grid th {
+    background: #f5f5f5;
+    font-weight: 600;
+}
+
+.employee-data-grid tbody tr:hover {
+    background: #fafafa;
+}

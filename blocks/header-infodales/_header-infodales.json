@@ -1,0 +1,31 @@
+{
+  "definitions": [
+    {
+      "title": "Header Infodales",
+      "id": "header-infodales",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Header Infodales",
+              "model": "header-infodales"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "header-infodales",
+      "fields": [
+        { "component": "reference", "valueType": "string", "name": "logo", "label": "Logo" },
+        { "component": "richtext", "valueType": "string", "name": "navigation", "label": "Navigation (use nested lists for dropdown items)" },
+        { "component": "richtext", "valueType": "string", "name": "footerLinks", "label": "Footer Links" },
+        { "component": "text", "valueType": "string", "name": "copyright", "label": "Copyright Text" }
+      ]
+    }
+  ],
+  "filters": []
+}

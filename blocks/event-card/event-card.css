@@ -1,0 +1,11 @@
+.event-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.event-card > div {
+  margin: 0;
+}

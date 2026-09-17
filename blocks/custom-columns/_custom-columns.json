@@ -1,0 +1,63 @@
+{
+    "definitions": [
+        {
+            "title": "Custom Column (3 col)",
+            "id": "custom-columns",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/columns/v1/columns",
+                        "template": {
+                            "columns": "3",
+                            "rows": "1"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "models": [
+        {
+            "id": "custom-columns",
+            "fields": [
+                {
+                    "component": "select",
+                    "valueType": "string",
+                    "name": "classes",
+                    "label": "Variant",
+                    "options": [
+                        {
+                            "name": "Default",
+                            "value": ""
+                        },
+                        {
+                            "name": "Image + Text",
+                            "value": "image-text"
+                        },
+                        {
+                            "name": "Text + CTA",
+                            "value": "text-cta"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "filters": [
+        {
+            "id": "custom-columns",
+            "components": [
+                "custom-columns-item"
+            ]
+        },
+        {
+            "id": "custom-columns-item",
+            "components": [
+                "text",
+                "image",
+                "button",
+                "title"
+            ]
+        }
+    ]
+}

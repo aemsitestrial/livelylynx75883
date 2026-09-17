@@ -1,0 +1,87 @@
+{
+  "definitions": [
+    {
+      "title": "Pricing Table",
+      "id": "pricing-table",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Pricing Table",
+              "model": "pricing-table"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "pricing-table",
+      "fields": [
+        {
+          "component": "text",
+          "name": "planName",
+          "label": "Plan name",
+          "valueType": "string"
+        },
+        {
+          "component": "number",
+          "name": "price",
+          "label": "Price",
+          "valueType": "number",
+          "value": 0,
+          "validation": {
+            "numberMin": 0,
+            "numberMax": 100000
+          }
+        },
+        {
+          "component": "select",
+          "name": "billingCycle",
+          "label": "Billing cycle",
+          "valueType": "string",
+          "options": [
+            {
+              "name": "Monthly",
+              "value": "monthly"
+            },
+            {
+              "name": "Yearly",
+              "value": "yearly"
+            }
+          ]
+        },
+        {
+          "component": "checkbox-group",
+          "name": "included",
+          "label": "Included features",
+          "valueType": "string[]",
+          "options": [
+            {
+              "name": "Support",
+              "value": "support"
+            },
+            {
+              "name": "Analytics",
+              "value": "analytics"
+            },
+            {
+              "name": "API access",
+              "value": "api"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "pricing-table",
+      "components": [
+        "pricing-table"
+      ]
+    }
+  ]
+}

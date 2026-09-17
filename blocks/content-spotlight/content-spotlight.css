@@ -1,0 +1,11 @@
+.content-spotlight {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.content-spotlight > div {
+  margin: 0;
+}

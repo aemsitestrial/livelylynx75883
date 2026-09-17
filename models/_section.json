@@ -50,7 +50,32 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "banner",
+        "testimonial-card",
+        "employee-data",
+        "teaser",
+        "employee-form",
+        "product-catalog",
+        "promo-banner",
+        "event-card",
+        "product-feature",
+        "author-profile",
+        "faq-list",
+        "download-panel",
+        "pricing-table",
+        "article-meta",
+        "media-gallery",
+        "content-spotlight",
+        "card",
+        "slider",
+        "blog-list",
+        "header-infodales",
+        "molecular-footer",
+        "form-builder",
+        "custom-columns",
+        "trip-booking-form",
+        "brand-footer"
       ]
     }
   ]

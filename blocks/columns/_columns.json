@@ -33,6 +33,26 @@
           "name": "rows",
           "value": "",
           "label": "Rows"
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "classes",
+          "label": "Variant",
+          "options": [
+            {
+              "name": "Default",
+              "value": ""
+            },
+            {
+              "name": "Image + Text",
+              "value": "image-text"
+            },
+            {
+              "name": "Text + CTA",
+              "value": "text-cta"
+            }
+          ]
         }
       ]
     }

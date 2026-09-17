@@ -1,0 +1,54 @@
+/* blocks/slider/slider.css */
+.slider-inner {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-slide {
+    flex: 0 0 100%;
+}
+
+.slider-slide img {
+    width: 100%;
+    height: 350px;
+    display: block;
+}
+
+.slider-slide-content {
+    padding: 16px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 0;
+}
+
+.slider-dots button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #ccc;
+}
+
+.slider-dots button.is-active {
+    background: #333;
+}
+
+.slider-authoring-source {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0.01;
+
+    /* not fully 0 — some UE versions ignore true 0-opacity for hit-testing */
+    pointer-events: none;
+}

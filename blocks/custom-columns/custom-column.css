@@ -1,0 +1,69 @@
+.custom-columns>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-columns img {
+    width: 100%;
+}
+
+.custom-columns>div>div {
+    order: 1;
+}
+
+.custom-columns>div>.custom-columns-img-col {
+    order: 0;
+}
+
+.custom-columns>div>.custom-columns-img-col img {
+    display: block;
+}
+
+/* 2-up on mobile/tablet */
+@media (width >=480px) {
+    .custom-columns>div {
+        flex-flow: row wrap;
+        gap: 16px;
+    }
+
+    .custom-columns>div>div {
+        flex: 1 1 calc(50% - 8px);
+    }
+}
+
+/* 3-up on desktop */
+@media (width >=900px) {
+    .custom-columns>div {
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    .custom-columns>div>div {
+        flex: 1;
+    }
+}
+
+/* Image + Text variant */
+.custom-columns.image-text>div {
+    align-items: center;
+}
+
+/* Text + CTA variant */
+.custom-columns.text-cta .button-container {
+    margin-top: 16px;
+}
+
+.custom-columns.text-cta .button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--link-color, #1473e6);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.custom-columns.text-cta .button:hover {
+    background: var(--link-hover-color, #0d66d0);
+}

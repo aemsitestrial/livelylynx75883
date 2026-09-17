@@ -1,0 +1,97 @@
+.banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    /* min-height: 240px; */
+    overflow: hidden;
+}
+
+.banner .banner-image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.banner .banner-image picture,
+.banner .banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .banner-content {
+    padding: 32px 24px;
+    color: var(--background-color);
+    max-width: 600px;
+}
+
+/* --- Typography for Title and Rich Text --- */
+.banner .banner-content h1,
+.banner .banner-content h2,
+.banner .banner-content h3 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    /* Responsive font size */
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 16px;
+
+    /* Soft shadow to make text pop against any background image */
+    text-shadow: 0 2px 8px rgb(0 0 0 / 60%);
+    letter-spacing: -0.02em;
+}
+
+.banner .banner-content p {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    line-height: 1.6;
+    margin: 0 0 24px;
+    font-weight: 400;
+    text-shadow: 0 1px 4px rgb(0 0 0 / 60%);
+    max-width: 80%;
+
+    /* Keeps lines from getting too long */
+}
+
+/* --- Call to Action (Button) Styling --- */
+.banner .banner-cta {
+    margin-top: auto;
+    padding: 0 24px 32px;
+}
+
+.banner .banner-cta a {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: var(--background-color, #fff);
+    color: var(--text-color, #000);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 8px;
+
+    /* Modern slightly rounded corners */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
+}
+
+/* Hover micro-animation for the button */
+.banner .banner-cta a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgb(0 0 0 / 30%);
+    background-color: var(--color-neutral-50, #f4f4f4);
+}
+
+
+@media (width >=900px) {
+    .banner {
+        min-height: 360px;
+    }
+
+    .banner .banner-content {
+        padding: 48px 40px;
+    }
+
+    .banner .banner-cta {
+        padding: 0 40px 48px;
+    }
+}

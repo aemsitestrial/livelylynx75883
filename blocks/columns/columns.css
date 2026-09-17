@@ -1,4 +1,4 @@
-.columns > div {
+.columns>div {
   display: flex;
   flex-direction: column;
 }
@@ -7,27 +7,69 @@
   width: 100%;
 }
 
-.columns > div > div {
+.columns>div>div {
   order: 1;
 }
 
-.columns > div > .columns-img-col {
+.columns>div>.columns-img-col {
   order: 0;
 }
 
-.columns > div > .columns-img-col img {
+.columns>div>.columns-img-col img {
   display: block;
 }
 
-@media (width >= 900px) {
-  .columns > div {
+/* ---- Responsive column layout: 2-up mobile, 3-up desktop for 3-col blocks ---- */
+@media (width >=480px) {
+  .columns[data-columns="2"]>div,
+  .columns[data-columns="3"]>div {
+    flex-flow: row wrap;
+    gap: 16px;
+  }
+
+  .columns[data-columns="2"]>div>div,
+  .columns[data-columns="3"]>div>div {
+    flex: 1 1 calc(50% - 8px);
+  }
+}
+
+@media (width >=900px) {
+  .columns>div {
     align-items: center;
     flex-direction: unset;
     gap: 24px;
   }
 
-  .columns > div > div {
+  .columns>div>div {
     flex: 1;
     order: unset;
   }
+
+  .columns[data-columns="3"]>div>div {
+    flex: 1 1 0;
+  }
+}
+
+/* ---- Image + Text variant ---- */
+.columns.image-text>div {
+  align-items: center;
+}
+
+/* ---- Text + CTA variant ---- */
+.columns.text-cta .button-container {
+  margin-top: 16px;
+}
+
+.columns.text-cta .button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--link-color, #1473e6);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.columns.text-cta .button:hover {
+  background: var(--link-hover-color, #0d66d0);
 }

@@ -21,6 +21,40 @@
           "name": "keywords",
           "multi": true,
           "label": "Keywords"
+        },
+        {
+          "component": "aem-content",
+          "valueType": "string",
+          "name": "nav",
+          "label": "Header (Nav) Source",
+          "description": "Overrides the default /nav header for this page"
+        },
+        {
+          "component": "aem-content",
+          "valueType": "string",
+          "name": "footer",
+          "label": "Footer Source",
+          "description": "Overrides the default /footer for this page"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "hide-nav",
+          "label": "Hide Header",
+          "description": "Hides the header/nav entirely on this page"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "hide-footer",
+          "label": "Hide Footer",
+          "description": "Hides the footer entirely on this page"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "template",
+          "label": "Template"
         }
       ]
     }
