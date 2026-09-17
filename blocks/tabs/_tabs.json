@@ -1,7 +1,7 @@
 {
     "definitions": [
         {
-            "title": "Tabs / Accordion",
+            "title": "Tabs",
             "id": "tabs",
             "plugins": {
                 "xwalk": {
