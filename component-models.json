@@ -1071,6 +1071,53 @@
     ]
   },
   {
+    "id": "tabs",
+    "fields": [
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "classes",
+        "label": "Variant",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tabs-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Tab Heading",
+        "required": true
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon",
+        "label": "Icon (optional)"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "body",
+        "label": "Body Content"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "video",
+        "label": "Video (asset or external URL, optional)"
+      }
+    ]
+  },
+  {
     "id": "teaser",
     "fields": [
       {

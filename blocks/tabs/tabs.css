@@ -1,0 +1,155 @@
+.tabs {
+    --tabs-border-color: #e2e2e2;
+    --tabs-accent: #1473e6;
+    --tabs-text: #1d1d1d;
+    --tabs-muted: #6e6e6e;
+    --tabs-bg: #fff;
+    --tabs-radius: 8px;
+    --tabs-trigger-gap: 0.5rem;
+
+    margin: 2rem 0;
+}
+
+/* --- Tab list --- */
+.tabs-list {
+    display: flex;
+    gap: 0.25rem;
+    border-bottom: 1px solid var(--tabs-border-color);
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.tabs-list::-webkit-scrollbar {
+    height: 4px;
+}
+
+.tabs-list::-webkit-scrollbar-thumb {
+    background: var(--tabs-border-color);
+    border-radius: 4px;
+}
+
+/* --- Trigger buttons --- */
+.tabs-trigger {
+    display: flex;
+    align-items: center;
+    gap: var(--tabs-trigger-gap);
+    flex-shrink: 0;
+    padding: 0.85rem 1.25rem;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--tabs-muted);
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    white-space: nowrap;
+}
+
+.tabs-trigger:hover {
+    color: var(--tabs-text);
+}
+
+.tabs-trigger:focus-visible {
+    outline: 2px solid var(--tabs-accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.tabs-trigger[aria-selected='true'] {
+    color: var(--tabs-text);
+    border-bottom-color: var(--tabs-accent);
+    font-weight: 600;
+}
+
+.tabs-trigger-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.tabs-trigger-icon img,
+.tabs-trigger-icon picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tabs-trigger-label {
+    margin: 0;
+}
+
+/* --- Panels --- */
+.tabs-panels {
+    padding-top: 1.5rem;
+}
+
+.tabs-panel {
+    animation: tabs-fade-in 0.18s ease;
+}
+
+@keyframes tabs-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tabs-body {
+    color: var(--tabs-text);
+    line-height: 1.6;
+}
+
+.tabs-body p:first-child {
+    margin-top: 0;
+}
+
+/* --- Video embed --- */
+.tabs-video {
+    margin-top: 1.25rem;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: var(--tabs-radius);
+    overflow: hidden;
+}
+
+.tabs-video video,
+.tabs-video iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* --- Responsive: stack triggers on narrow viewports --- */
+@media (width <= 600px) {
+    .tabs-trigger {
+        padding: 0.7rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .tabs-trigger-label {
+        max-width: 140px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* --- Dark mode support (optional, only applies if project uses prefers-color-scheme) --- */
+@media (prefers-color-scheme: dark) {
+    .tabs {
+        --tabs-border-color: #3a3a3a;
+        --tabs-text: #f0f0f0;
+        --tabs-muted: #a0a0a0;
+        --tabs-bg: #1a1a1a;
+    }
+}

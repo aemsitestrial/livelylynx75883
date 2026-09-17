@@ -1,0 +1,89 @@
+{
+    "definitions": [
+        {
+            "title": "Tabs / Accordion",
+            "id": "tabs",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block",
+                        "template": {
+                            "name": "Tabs / Accordion"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "title": "Tab",
+            "id": "tabs-item",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block/item",
+                        "template": {
+                            "name": "Tab"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "models": [
+        {
+            "id": "tabs",
+            "fields": [
+                {
+                    "component": "select",
+                    "valueType": "string",
+                    "name": "classes",
+                    "label": "Variant",
+                    "options": [
+                        {
+                            "name": "Default",
+                            "value": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "tabs-item",
+            "fields": [
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "heading",
+                    "label": "Tab Heading",
+                    "required": true
+                },
+                {
+                    "component": "reference",
+                    "valueType": "string",
+                    "name": "icon",
+                    "label": "Icon (optional)"
+                },
+                {
+                    "component": "richtext",
+                    "valueType": "string",
+                    "name": "body",
+                    "label": "Body Content"
+                },
+                {
+                    "component": "aem-content",
+                    "valueType": "string",
+                    "name": "video",
+                    "label": "Video (asset or external URL, optional)"
+                }
+            ]
+        }
+    ],
+    "filters": [
+        {
+            "id": "tabs",
+            "components": [
+                "tabs-item"
+            ]
+        }
+    ]
+}

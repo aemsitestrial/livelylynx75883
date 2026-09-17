@@ -40,7 +40,8 @@
       "form-builder",
       "custom-columns",
       "trip-booking-form",
-      "brand-footer"
+      "brand-footer",
+      "tabs"
     ]
   },
   {
@@ -192,6 +193,12 @@
     "id": "slider",
     "components": [
       "slide"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabs-item"
     ]
   },
   {
