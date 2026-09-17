@@ -5,7 +5,7 @@ function parseTabItem(row) {
 }
 function buildVideoEmbed(videoDiv) {
   const link = videoDiv?.querySelector("a");
-  const src = link?.href;
+  const src = link?.href ?? videoDiv?.textContent?.trim();
   if (!src) return null;
   const wrapper = document.createElement("div");
   wrapper.className = "tabs-video";

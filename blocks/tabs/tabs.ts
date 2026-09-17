@@ -18,7 +18,7 @@ function parseTabItem(row: HTMLElement): TabItemRow {
 
 function buildVideoEmbed(videoDiv?: HTMLElement): HTMLDivElement | null {
     const link = videoDiv?.querySelector('a');
-    const src = link?.href;
+    const src = link?.href ?? videoDiv?.textContent?.trim();
     if (!src) return null;
 
     const wrapper = document.createElement('div');
