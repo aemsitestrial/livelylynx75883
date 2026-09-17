@@ -131,7 +131,7 @@
 }
 
 /* --- Responsive: stack triggers on narrow viewports --- */
-@media (width <= 600px) {
+@media (width <=600px) {
     .tabs-trigger {
         padding: 0.7rem 1rem;
         font-size: 0.875rem;
@@ -152,4 +152,37 @@
         --tabs-muted: #a0a0a0;
         --tabs-bg: #1a1a1a;
     }
+}
+
+.tabs-accordion-mode .tabs-list {
+    flex-direction: column;
+    border-bottom: none;
+    overflow-x: visible;
+}
+
+.tabs-accordion-mode .tabs-trigger {
+    border: 1px solid var(--tabs-border-color);
+    border-bottom: none;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.tabs-accordion-mode .tabs-trigger:last-of-type {
+    border-bottom: 1px solid var(--tabs-border-color);
+}
+
+.tabs-accordion-mode .tabs-trigger::after {
+    content: '+';
+    transition: transform 0.2s ease;
+    margin-left: auto;
+}
+
+.tabs-accordion-mode .tabs-trigger[aria-expanded='true']::after {
+    transform: rotate(45deg);
+}
+
+.tabs-accordion-mode .tabs-panel {
+    padding: 1rem;
+    border: 1px solid var(--tabs-border-color);
+    border-top: none;
 }
