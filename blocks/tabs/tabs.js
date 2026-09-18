@@ -156,7 +156,7 @@ function decorate(block) {
       else activateTab(block, panelId);
     });
     tablist.append(trigger);
-    const panel = document.createElement("div");
+    const panel = row;
     panel.className = "tabs-panel";
     panel.id = panelId;
     panel.setAttribute("role", "tabpanel");
@@ -168,7 +168,6 @@ function decorate(block) {
     const videoEmbed = buildVideoEmbed(videoDiv);
     if (videoEmbed) panel.append(videoEmbed);
     panelsWrapper.append(panel);
-    row.remove();
   });
   block.append(tablist, panelsWrapper);
   wireKeyboardNav(tablist);
