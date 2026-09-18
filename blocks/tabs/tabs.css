@@ -47,9 +47,9 @@
     white-space: nowrap;
 }
 
-.tabs-trigger:hover {
+/* .tabs-trigger:hover {
     color: var(--tabs-text);
-}
+} */
 
 .tabs-trigger:focus-visible {
     outline: 2px solid var(--tabs-accent);
@@ -145,14 +145,14 @@
 }
 
 /* --- Dark mode support (optional, only applies if project uses prefers-color-scheme) --- */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     .tabs {
         --tabs-border-color: #3a3a3a;
         --tabs-text: #f0f0f0;
         --tabs-muted: #a0a0a0;
         --tabs-bg: #1a1a1a;
     }
-}
+} */
 
 .tabs-accordion-mode .tabs-list {
     flex-direction: column;
