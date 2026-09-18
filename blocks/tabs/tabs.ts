@@ -1,4 +1,4 @@
-import { moveInstrumentation } from "../../scripts/aem";
+import { moveInstrumentation } from "../../scripts/aem.js";
 const MOBILE_QUERY: MediaQueryList = window.matchMedia('(max-width: 768px)');
 
 interface TabItemRow {

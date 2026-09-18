@@ -1,4 +1,4 @@
-import { moveInstrumentation } from "../../scripts/aem";
+import { moveInstrumentation } from "../../scripts/aem.js";
 const MOBILE_QUERY = window.matchMedia("(max-width: 768px)");
 function parseTabItem(row) {
   const children = Array.from(row.children);
