@@ -1,3 +1,4 @@
+import { moveInstrumentation } from "../../scripts/aem";
 const MOBILE_QUERY: MediaQueryList = window.matchMedia('(max-width: 768px)');
 
 interface TabItemRow {
@@ -214,7 +215,10 @@ export default function decorate(block: HTMLElement): void {
         // the old code did with row.remove()) makes the whole Tab invisible
         // to Universal Editor's content tree and field panel, even though
         // the JCR content is saved correctly.
-        const panel = row;
+
+        // const panel = row;
+        const panel = document.createElement('div');
+        moveInstrumentation(row, panel);
         panel.className = 'tabs-panel';
         panel.id = panelId;
         panel.setAttribute('role', 'tabpanel');
@@ -229,6 +233,7 @@ export default function decorate(block: HTMLElement): void {
         if (videoEmbed) panel.append(videoEmbed);
         videoDiv?.remove();
         panelsWrapper.append(panel);
+        row.remove(); // now safe — its data-aue-* tracking already moved to `panel`
 
     });
     block.append(tablist, panelsWrapper);

@@ -1,0 +1,1 @@
+export function moveInstrumentation(from: Element, to: Element): void;

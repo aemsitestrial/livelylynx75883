@@ -1,3 +1,4 @@
+import { moveInstrumentation } from "../../scripts/aem";
 const MOBILE_QUERY = window.matchMedia("(max-width: 768px)");
 function parseTabItem(row) {
   const children = Array.from(row.children);
@@ -156,7 +157,8 @@ function decorate(block) {
       else activateTab(block, panelId);
     });
     tablist.append(trigger);
-    const panel = row;
+    const panel = document.createElement("div");
+    moveInstrumentation(row, panel);
     panel.className = "tabs-panel";
     panel.id = panelId;
     panel.setAttribute("role", "tabpanel");
@@ -169,6 +171,7 @@ function decorate(block) {
     if (videoEmbed) panel.append(videoEmbed);
     videoDiv?.remove();
     panelsWrapper.append(panel);
+    row.remove();
   });
   block.append(tablist, panelsWrapper);
   wireKeyboardNav(tablist);
