@@ -188,8 +188,6 @@ export default function decorate(block: HTMLElement): void {
         trigger.setAttribute('aria-selected', String(i === 0));
         trigger.tabIndex = i === 0 ? 0 : -1;
 
-        // Fixed: iconDiv may legitimately be undefined for tabs with no icon.
-        // The old `iconDiv!.querySelector(...)` would throw at runtime here.
         const iconImg = iconDiv?.querySelector('img');
         if (iconImg && iconDiv) {
             const iconSpan = document.createElement('span');
@@ -210,7 +208,13 @@ export default function decorate(block: HTMLElement): void {
 
         tablist.append(trigger);
 
-        const panel = document.createElement('div');
+
+        // Reuse `row` itself as the panel — it carries UE's component-level
+        // data-aue-resource / data-aue-component tracking. Discarding it (as
+        // the old code did with row.remove()) makes the whole Tab invisible
+        // to Universal Editor's content tree and field panel, even though
+        // the JCR content is saved correctly.
+        const panel = row;
         panel.className = 'tabs-panel';
         panel.id = panelId;
         panel.setAttribute('role', 'tabpanel');
@@ -225,9 +229,8 @@ export default function decorate(block: HTMLElement): void {
         if (videoEmbed) panel.append(videoEmbed);
 
         panelsWrapper.append(panel);
-        row.remove();
-    });
 
+    });
     block.append(tablist, panelsWrapper);
     wireKeyboardNav(tablist);
 
