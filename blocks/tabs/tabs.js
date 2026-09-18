@@ -167,6 +167,7 @@ function decorate(block) {
     }
     const videoEmbed = buildVideoEmbed(videoDiv);
     if (videoEmbed) panel.append(videoEmbed);
+    videoDiv?.remove();
     panelsWrapper.append(panel);
   });
   block.append(tablist, panelsWrapper);
