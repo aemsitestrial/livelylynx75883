@@ -227,7 +227,7 @@ export default function decorate(block: HTMLElement): void {
 
         const videoEmbed = buildVideoEmbed(videoDiv);
         if (videoEmbed) panel.append(videoEmbed);
-
+        videoDiv?.remove();
         panelsWrapper.append(panel);
 
     });

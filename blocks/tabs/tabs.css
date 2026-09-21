@@ -145,6 +145,7 @@
 }
 
 /* --- Dark mode support (optional, only applies if project uses prefers-color-scheme) --- */
+
 /* @media (prefers-color-scheme: dark) {
     .tabs {
         --tabs-border-color: #3a3a3a;
