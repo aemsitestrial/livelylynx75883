@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://main--livelylynx75883--aemsitetrial.aem.live/sitemap.xml
