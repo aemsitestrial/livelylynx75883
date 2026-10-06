@@ -47,26 +47,6 @@
           "label": "Description",
           "value": "",
           "valueType": "string"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "button",
-          "label": "Button Text",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "buttonUrl",
-          "label": "Button URL",
-          "value": ""
-        },
-        {
-          "component": "boolean",
-          "name": "reverse",
-          "label": "Reverse Layout",
-          "value": false
         }
       ]
     }
