@@ -51,12 +51,5 @@
       ]
     }
   ],
-  "filters": [
-   {
-            "id": "product-card",
-            "components": [
-                "product-card"
-            ]
-        }
-  ]
+  "filters": [ ]
 }
