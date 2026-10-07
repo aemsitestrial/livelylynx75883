@@ -79,7 +79,8 @@
         "tabs",
         "detail",
         "feature-spotlight",
-        "spotlight"
+        "spotlight",
+        "product-card"
       ]
     }
   ]

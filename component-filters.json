@@ -44,7 +44,8 @@
       "tabs",
       "detail",
       "feature-spotlight",
-      "spotlight"
+      "spotlight",
+      "product-card"
     ]
   },
   {
@@ -172,6 +173,12 @@
     "id": "pricing-table",
     "components": [
       "pricing-table"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "product-card"
     ]
   },
   {
