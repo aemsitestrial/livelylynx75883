@@ -176,7 +176,7 @@
     ]
   },
   {
-    "id": "section",
+    "id": "product-card",
     "components": [
       "product-card"
     ]
