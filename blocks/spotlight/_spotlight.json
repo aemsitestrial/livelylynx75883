@@ -1,0 +1,55 @@
+{
+  "definitions": [
+    {
+      "title": "Interactive Spotlight",
+      "id": "spotlight",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Interactive Spotlight",
+              "model": "spotlight"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "spotlight",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "title",
+          "label": "Title",
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "description",
+          "label": "Description",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "button",
+          "label": "Button",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
