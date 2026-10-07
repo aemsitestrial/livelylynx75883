@@ -1,0 +1,102 @@
+.promo-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--light-color, #f8f8f8);
+    color: var(--text-color, #131313);
+    box-shadow: 0 2px 12px rgb(0 0 0 / 10%);
+}
+
+.promo-card>div {
+    margin: 0;
+}
+
+/* image row */
+.promo-card .promo-card-image picture,
+.promo-card .promo-card-image img {
+    display: block;
+    width: 100%;
+}
+
+.promo-card .promo-card-image img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* content row */
+.promo-card .promo-card-body>div {
+    padding: 24px;
+}
+
+.promo-card .promo-card-eyebrow {
+    margin: 0 0 8px;
+    font-size: var(--body-font-size-xs, 12px);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.promo-card .promo-card-title {
+    margin: 0 0 12px;
+    font-size: var(--heading-font-size-m, 24px);
+    line-height: 1.25;
+}
+
+.promo-card .promo-card-description {
+    margin: 0 0 16px;
+    font-size: var(--body-font-size-s, 16px);
+    line-height: 1.5;
+}
+
+.promo-card .promo-card-cta {
+    margin: 0;
+}
+
+/* theme variant: classes_theme = dark */
+.promo-card.dark {
+    background: var(--dark-color, #1c1c1c);
+    color: #fff;
+}
+
+.promo-card.dark .promo-card-title {
+    color: #fff;
+}
+
+/* badge variant: classes_badge = true */
+.promo-card.badge::before {
+    content: 'Featured';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--link-color, #3b63fb);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* side-by-side on larger screens */
+@media (width >=900px) {
+    .promo-card {
+        flex-direction: row;
+    }
+
+    .promo-card .promo-card-image,
+    .promo-card .promo-card-body {
+        flex: 1 1 50%;
+    }
+
+    .promo-card .promo-card-image img {
+        height: 100%;
+        aspect-ratio: auto;
+    }
+
+    .promo-card .promo-card-body>div {
+        padding: 40px;
+    }
+}

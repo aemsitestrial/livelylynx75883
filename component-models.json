@@ -1116,6 +1116,83 @@
     ]
   },
   {
+    "id": "promo-card",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt"
+      },
+      {
+        "component": "text",
+        "name": "content_eyebrow",
+        "label": "Eyebrow"
+      },
+      {
+        "component": "text",
+        "name": "content_title",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "content_titleType",
+        "label": "Title Type",
+        "options": [
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "content_description",
+        "label": "Description"
+      },
+      {
+        "component": "aem-content",
+        "name": "content_cta",
+        "label": "CTA Link"
+      },
+      {
+        "component": "text",
+        "name": "content_ctaText",
+        "label": "CTA Text"
+      },
+      {
+        "component": "select",
+        "name": "classes_theme",
+        "label": "Theme",
+        "options": [
+          {
+            "name": "Light",
+            "value": "light"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          }
+        ]
+      },
+      {
+        "component": "boolean",
+        "name": "classes_badge",
+        "label": "Show badge",
+        "valueType": "boolean"
+      }
+    ]
+  },
+  {
     "id": "slide",
     "fields": [
       {
