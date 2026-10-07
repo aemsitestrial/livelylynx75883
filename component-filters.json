@@ -177,12 +177,6 @@
     ]
   },
   {
-    "id": "section",
-    "components": [
-      "product-card"
-    ]
-  },
-  {
     "id": "product-catalog",
     "components": [
       "product-catalog"
