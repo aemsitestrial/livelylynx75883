@@ -564,7 +564,7 @@
           }
         },
         {
-          "title": "Interactive Spotlight",
+          "title": "Spotlight",
           "id": "spotlight",
           "plugins": {
             "xwalk": {
