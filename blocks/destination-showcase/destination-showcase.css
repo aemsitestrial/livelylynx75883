@@ -22,17 +22,14 @@
     list-style: none;
 }
 
-/* gallery: scrollable row of photos */
 .destination-showcase .ds-gallery ul {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
 }
 
-.destination-showcase .ds-gallery li {
-    flex: 0 0 80%;
-    scroll-snap-align: start;
+.destination-showcase .ds-gallery li:first-child {
+    grid-column: 1 / -1;
 }
 
 .destination-showcase .ds-gallery img {
@@ -41,6 +38,10 @@
     aspect-ratio: 16 / 9;
     border-radius: 8px;
     object-fit: cover;
+}
+
+.destination-showcase .ds-gallery li:not(:first-child) img {
+    aspect-ratio: 1;
 }
 
 /* content */
