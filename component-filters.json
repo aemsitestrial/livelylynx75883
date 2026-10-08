@@ -51,12 +51,6 @@
     ]
   },
   {
-    "id": "airline",
-    "components": [
-      "airline"
-    ]
-  },
-  {
     "id": "article-meta",
     "components": [
       "article-meta"

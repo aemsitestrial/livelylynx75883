@@ -22,12 +22,5 @@
       "fields": []
     }
   ],
-  "filters": [
-    {
-      "id": "section",
-      "components": [
-        "airline"
-      ]
-    }
-  ]
+  "filters": []
 }
