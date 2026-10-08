@@ -510,6 +510,115 @@
     ]
   },
   {
+    "id": "destination-showcase",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "gallery",
+        "label": "Gallery Images",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "content_eyebrow",
+        "label": "Eyebrow"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "content_title",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "content_titleType",
+        "label": "Title Type",
+        "options": [
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "content_highlights",
+        "label": "Highlights (tags)",
+        "multi": true
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content_description",
+        "label": "Description"
+      },
+      {
+        "component": "container",
+        "name": "ctas",
+        "label": "Buttons",
+        "multi": true,
+        "fields": [
+          {
+            "component": "aem-content",
+            "valueType": "string",
+            "name": "link",
+            "label": "Link"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "linkText",
+            "label": "Button label"
+          },
+          {
+            "component": "select",
+            "valueType": "string",
+            "name": "linkType",
+            "label": "Style",
+            "options": [
+              {
+                "name": "default",
+                "value": ""
+              },
+              {
+                "name": "primary",
+                "value": "primary"
+              },
+              {
+                "name": "secondary",
+                "value": "secondary"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "classes_theme",
+        "label": "Theme",
+        "options": [
+          {
+            "name": "Light",
+            "value": "light"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "download-panel",
     "fields": [
       {
