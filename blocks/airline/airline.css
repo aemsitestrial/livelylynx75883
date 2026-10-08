@@ -1,7 +1,7 @@
- .airline-container {
-  max-width: 1000px;
+.airline-container {
+  max-width: 1200px;
   margin: 40px auto;
-  padding: 30px;
+  padding: 20px;
 }
 
 .airline-container h2 {
@@ -9,15 +9,36 @@
   font-size: 32px;
 }
 
-.airline-item {
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 12px;
-  background: var(--light-color);
-  box-shadow: 0 4px 15px rgb(0 0 0 / 10%);
+.airline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.airline-item h3 {
-  margin: 0;
-  font-size: 20px;
+.airline-card {
+  padding: 24px;
+  border-radius: 12px;
+  background: var(--background-color);
+  box-shadow: 0 4px 15px rgb(0 0 0 / 12%);
+}
+
+.airline-emoji {
+  margin-bottom: 15px;
+  font-size: 48px;
+}
+
+.airline-card h3 {
+  margin: 0 0 15px;
+  font-size: 22px;
+}
+
+.airline-card p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+@media (width < 700px) {
+  .airline-grid {
+    grid-template-columns: 1fr;
+  }
 }

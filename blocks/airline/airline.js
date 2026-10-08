@@ -1,14 +1,14 @@
-const GRAPHQL_ENDPOINT = 'https://kscommerce.krisshop.com/graphql';
+const GRAPHQL_ENDPOINT = 'https://countries.trevorblades.com/';
 
-async function getGraphQLSchema() {
+async function getCountries() {
   const query = `
     {
-      __schema {
-        queryType {
-          fields {
-            name
-          }
-        }
+      countries {
+        code
+        name
+        capital
+        currency
+        emoji
       }
     }
   `;
@@ -25,7 +25,13 @@ async function getGraphQLSchema() {
     throw new Error(`GraphQL request failed: ${response.status}`);
   }
 
-  return response.json();
+  const result = await response.json();
+
+  if (result.errors) {
+    throw new Error(result.errors[0].message);
+  }
+
+  return result.data.countries;
 }
 
 export default async function decorate(block) {
@@ -38,49 +44,47 @@ export default async function decorate(block) {
   title.textContent = 'Airline';
 
   const loading = document.createElement('p');
-  loading.textContent = 'Loading airline data...';
+  loading.textContent = 'Loading data...';
 
   container.append(title, loading);
   block.appendChild(container);
 
   try {
-    const result = await getGraphQLSchema();
+    const countries = await getCountries();
 
     loading.remove();
 
-    if (result.errors) {
-      throw new Error(result.errors[0].message);
-    }
+    const grid = document.createElement('div');
+    grid.className = 'airline-grid';
 
-    // GraphQL requires the __schema field.
-    // eslint-disable-next-line no-underscore-dangle
-    const { __schema: schemaData } = result.data;
-    const { queryType } = schemaData;
-    const { fields = [] } = queryType;
+    countries.slice(0, 12).forEach((country) => {
+      const card = document.createElement('div');
+      card.className = 'airline-card';
 
-    const airlineFields = fields.filter((field) => field.name.toLowerCase().includes('airline'));
-
-    if (airlineFields.length === 0) {
-      const message = document.createElement('p');
-      message.textContent = 'No airline query was found in the GraphQL schema.';
-      container.appendChild(message);
-      return;
-    }
-
-    airlineFields.forEach((field) => {
-      const item = document.createElement('div');
-      item.className = 'airline-item';
+      const emoji = document.createElement('div');
+      emoji.className = 'airline-emoji';
+      emoji.textContent = country.emoji;
 
       const name = document.createElement('h3');
-      name.textContent = field.name;
+      name.textContent = country.name;
 
-      item.appendChild(name);
-      container.appendChild(item);
+      const code = document.createElement('p');
+      code.textContent = `Code: ${country.code}`;
+
+      const capital = document.createElement('p');
+      capital.textContent = `Capital: ${country.capital || 'N/A'}`;
+
+      const currency = document.createElement('p');
+      currency.textContent = `Currency: ${country.currency || 'N/A'}`;
+
+      card.append(emoji, name, code, capital, currency);
+      grid.appendChild(card);
     });
+
+    container.appendChild(grid);
   } catch (error) {
     const message = document.createElement('p');
-    message.textContent = 'Unable to load airline data.';
+    message.textContent = 'Unable to load data.';
     loading.replaceWith(message);
-    throw error;
   }
 }
