@@ -97,6 +97,13 @@ function buildAutoBlocks(main) {
   }
 }
 
+function decorateSectionBackgrounds(main) {
+  main.querySelectorAll('.section[data-background]').forEach((section) => {
+    const url = section.dataset.background;
+    if (url) section.style.backgroundImage = `url('${url}')`;
+  });
+}
+
 /**
  * Decorates the main element.
  * @param {Element} main The main element
@@ -109,6 +116,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  decorateSectionBackgrounds(main);
 }
 
 /**

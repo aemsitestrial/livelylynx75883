@@ -170,6 +170,14 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          },
+          {
+            "name": "Centered",
+            "value": "centered"
           }
         ]
       }

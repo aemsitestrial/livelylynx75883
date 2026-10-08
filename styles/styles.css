@@ -273,6 +273,21 @@ main .section.highlight {
   padding: 40px 0;
 }
 
+main .section.dark {
+  background-color: var(--dark-color, #1c1c1c);
+  color: #fff;
+}
+
+main .section.centered {
+  text-align: center;
+}
+
+/* background image set from section metadata */
+main .section[data-background] {
+  background-size: cover;
+  background-position: center;
+}
+
 
 /* ==========================================
    Landing Page Template Styles
@@ -343,7 +358,7 @@ body.landing-page main .section.dark h3 {
   color: #fff;
 }
 
-body.landing-page main .section.full-width > div {
+body.landing-page main .section.full-width>div {
   max-width: 100%;
   padding: 0;
 }
