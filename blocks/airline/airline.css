@@ -1,0 +1,23 @@
+ .airline-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+.airline-container h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.airline-item {
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  background: var(--light-color);
+  box-shadow: 0 4px 15px rgb(0 0 0 / 10%);
+}
+
+.airline-item h3 {
+  margin: 0;
+  font-size: 20px;
+}

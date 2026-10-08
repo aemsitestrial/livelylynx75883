@@ -176,6 +176,10 @@
     ]
   },
   {
+    "id": "airline",
+    "fields": []
+  },
+  {
     "id": "article-meta",
     "fields": [
       {
