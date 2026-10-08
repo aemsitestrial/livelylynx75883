@@ -47,7 +47,14 @@
       "spotlight",
       "product-card",
       "promo-card",
+      "airline",
       "destination-showcase"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "airline"
     ]
   },
   {
