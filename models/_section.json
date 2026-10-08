@@ -82,7 +82,8 @@
         "spotlight",
         "product-card",
         "promo-card",
-        "destination-showcase"
+        "destination-showcase",
+        "airline"
       ]
     }
   ]
