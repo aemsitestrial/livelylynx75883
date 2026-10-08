@@ -45,7 +45,14 @@
       "detail",
       "feature-spotlight",
       "spotlight",
-      "product-card"
+      "product-card",
+      "airline"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "airline"
     ]
   },
   {
