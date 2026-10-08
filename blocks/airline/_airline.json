@@ -22,5 +22,12 @@
       "fields": []
     }
   ],
-  "filters": []
+  "filters": [
+    {
+      "id": "airline",
+      "components": [
+        "airline"
+      ]
+    }
+  ]
 }
