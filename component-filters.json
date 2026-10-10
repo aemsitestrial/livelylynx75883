@@ -163,7 +163,24 @@
   {
     "id": "form-builder",
     "components": [
-      "form-field"
+      "form-text",
+      "form-email",
+      "form-phone",
+      "form-number",
+      "form-date",
+      "form-textarea",
+      "form-input",
+      "form-dropdown",
+      "form-radio",
+      "form-checkboxes",
+      "form-checkbox",
+      "form-switch",
+      "form-file",
+      "form-section",
+      "form-heading",
+      "form-note",
+      "form-divider",
+      "form-settings"
     ]
   },
   {

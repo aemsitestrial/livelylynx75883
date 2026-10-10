@@ -399,15 +399,288 @@
           }
         },
         {
-          "title": "Form Field",
-          "id": "form-field",
+          "title": "Short answer (text)",
+          "id": "form-text",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Form Field",
-                  "model": "form-field"
+                  "name": "Short answer (text)",
+                  "model": "form-input",
+                  "type": "text"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Email",
+          "id": "form-email",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Email",
+                  "model": "form-input",
+                  "type": "email"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Phone",
+          "id": "form-phone",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Phone",
+                  "model": "form-input",
+                  "type": "tel"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Number",
+          "id": "form-number",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Number",
+                  "model": "form-input",
+                  "type": "number"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Date",
+          "id": "form-date",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Date",
+                  "model": "form-input",
+                  "type": "date"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Long answer (textarea)",
+          "id": "form-textarea",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Long answer (textarea)",
+                  "model": "form-input",
+                  "type": "textarea"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Other input (url, password, time, range...)",
+          "id": "form-input",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Other input (url, password, time, range...)",
+                  "model": "form-input",
+                  "type": "url"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Dropdown",
+          "id": "form-dropdown",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Dropdown",
+                  "model": "form-choice",
+                  "type": "select"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Radio buttons",
+          "id": "form-radio",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Radio buttons",
+                  "model": "form-choice",
+                  "type": "radio"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Checkbox group",
+          "id": "form-checkboxes",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Checkbox group",
+                  "model": "form-choice",
+                  "type": "checkbox-group"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Single checkbox / consent",
+          "id": "form-checkbox",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Single checkbox / consent",
+                  "model": "form-consent",
+                  "type": "checkbox"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Toggle switch",
+          "id": "form-switch",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Toggle switch",
+                  "model": "form-consent",
+                  "type": "switch"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "File upload",
+          "id": "form-file",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "File upload",
+                  "model": "form-file",
+                  "type": "file"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Section (fieldset + legend)",
+          "id": "form-section",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Section (fieldset + legend)",
+                  "model": "form-section",
+                  "type": "section"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Heading",
+          "id": "form-heading",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Heading",
+                  "model": "form-section",
+                  "type": "heading"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Note / paragraph",
+          "id": "form-note",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Note / paragraph",
+                  "model": "form-section",
+                  "type": "note"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Divider",
+          "id": "form-divider",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Divider",
+                  "model": "form-section",
+                  "type": "divider"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Form settings (success message, redirect...)",
+          "id": "form-settings",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Form settings (success message, redirect...)",
+                  "model": "form-settings",
+                  "type": "settings"
                 }
               }
             }
