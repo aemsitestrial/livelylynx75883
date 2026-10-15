@@ -1,3 +1,4 @@
+
 {
   "definitions": [
     {
@@ -66,6 +67,22 @@
           "valueType": "string",
           "name": "linkText",
           "label": "Link Text"
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "buttonStyle",
+          "label": "Button Style",
+          "options": [
+            {
+              "name": "Primary",
+              "value": "primary"
+            },
+            {
+              "name": "Secondary",
+              "value": "secondary"
+            }
+          ]
         }
       ]
     }

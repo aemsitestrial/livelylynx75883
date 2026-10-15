@@ -290,6 +290,161 @@ main .section[data-background] {
 
 
 /* ==========================================
+   Layout controls (set by authors in the Universal Editor)
+   - Sections: data-layout / data-gap / data-width / data-spacing
+   - Blocks:   layout-width-*, layout-position-*, layout-text-*,
+               layout-size-*, layout-spacing-* (see models/_layout.json)
+   ========================================== */
+
+/* --- section: width --- */
+main .section[data-width='narrow'] > div {
+  max-width: 800px;
+}
+
+main .section[data-width='wide'] > div {
+  max-width: 1500px;
+}
+
+main .section[data-width='full'] > div {
+  max-width: none;
+  padding: 0;
+}
+
+/* --- section: spacing --- */
+main .section[data-spacing='none'] {
+  margin-block: 0;
+  padding-block: 0;
+}
+
+main .section[data-spacing='small'] {
+  margin-block: 16px;
+}
+
+main .section[data-spacing='large'] {
+  margin-block: 80px;
+}
+
+main .section.highlight[data-spacing='small'] {
+  margin: 0;
+  padding-block: 16px;
+}
+
+main .section.highlight[data-spacing='large'] {
+  margin: 0;
+  padding-block: 80px;
+}
+
+/* --- section: blocks side by side --- */
+main .section[data-layout^='columns-'] {
+  --layout-gap: 24px;
+  --layout-max: 1200px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--layout-gap);
+  align-items: start;
+  padding-inline: max(24px, calc((100% - var(--layout-max)) / 2));
+}
+
+main .section[data-layout^='columns-'] > div {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+main .section[data-layout^='columns-'][data-width='narrow'] { --layout-max: 800px; }
+main .section[data-layout^='columns-'][data-width='wide'] { --layout-max: 1500px; }
+main .section[data-layout^='columns-'][data-width='full'] { --layout-max: 100%; }
+main .section[data-layout^='columns-'][data-gap='small'] { --layout-gap: 12px; }
+main .section[data-layout^='columns-'][data-gap='large'] { --layout-gap: 48px; }
+
+@media (width >= 900px) {
+  main .section[data-layout='columns-2'] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  main .section[data-layout='columns-3'] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  main .section[data-layout='columns-4'] { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  main .section[data-layout='columns-1-2'] { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+  main .section[data-layout='columns-2-1'] { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+}
+
+/* --- block: width and position --- */
+main .block.layout-width-narrow {
+  max-width: 560px;
+}
+
+main .block.layout-width-medium {
+  max-width: 800px;
+}
+
+main .block.layout-width-narrow,
+main .block.layout-width-medium {
+  margin-inline: auto;
+}
+
+main .block.layout-position-left {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+main .block.layout-position-right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* full bleed: the block's wrapper drops its max-width and padding */
+main .section > div:has(> .block.layout-width-full) {
+  max-width: none;
+  padding: 0;
+}
+
+/* --- block: text alignment --- */
+main .block.layout-text-left { text-align: left; }
+main .block.layout-text-center { text-align: center; }
+main .block.layout-text-right { text-align: right; }
+
+/* --- block: text size (rescales the shared font tokens inside the block) --- */
+main .block.layout-size-small {
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+  --heading-font-size-xxl: 36px;
+  --heading-font-size-xl: 30px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
+}
+
+main .block.layout-size-large {
+  --body-font-size-m: 24px;
+  --body-font-size-s: 21px;
+  --body-font-size-xs: 19px;
+  --heading-font-size-xxl: 60px;
+  --heading-font-size-xl: 48px;
+  --heading-font-size-l: 38px;
+  --heading-font-size-m: 30px;
+  --heading-font-size-s: 26px;
+  --heading-font-size-xs: 24px;
+}
+
+main .block.layout-size-xlarge {
+  --body-font-size-m: 28px;
+  --body-font-size-s: 24px;
+  --body-font-size-xs: 21px;
+  --heading-font-size-xxl: 72px;
+  --heading-font-size-xl: 58px;
+  --heading-font-size-l: 44px;
+  --heading-font-size-m: 34px;
+  --heading-font-size-s: 30px;
+  --heading-font-size-xs: 26px;
+}
+
+/* --- block: space above & below (applied to the wrapper) --- */
+main .section > div:has(> .block.layout-spacing-none) { margin-block: 0; }
+main .section > div:has(> .block.layout-spacing-small) { margin-block: 12px; }
+main .section > div:has(> .block.layout-spacing-large) { margin-block: 48px; }
+
+
+/* ==========================================
    Landing Page Template Styles
    ========================================== */
 

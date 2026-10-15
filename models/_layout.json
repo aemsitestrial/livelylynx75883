@@ -1,0 +1,69 @@
+{
+  "fields": [
+    {
+      "component": "select",
+      "name": "classes_layoutwidth",
+      "label": "Layout: Width",
+      "valueType": "string",
+      "value": "",
+      "options": [
+        { "name": "Default", "value": "" },
+        { "name": "Narrow", "value": "layout-width-narrow" },
+        { "name": "Medium", "value": "layout-width-medium" },
+        { "name": "Full bleed (edge to edge)", "value": "layout-width-full" }
+      ]
+    },
+    {
+      "component": "select",
+      "name": "classes_layoutposition",
+      "label": "Layout: Position",
+      "description": "Where a Narrow or Medium block sits inside its section",
+      "valueType": "string",
+      "value": "",
+      "options": [
+        { "name": "Center", "value": "" },
+        { "name": "Left", "value": "layout-position-left" },
+        { "name": "Right", "value": "layout-position-right" }
+      ]
+    },
+    {
+      "component": "select",
+      "name": "classes_layouttext",
+      "label": "Layout: Text alignment",
+      "valueType": "string",
+      "value": "",
+      "options": [
+        { "name": "Default", "value": "" },
+        { "name": "Left", "value": "layout-text-left" },
+        { "name": "Center", "value": "layout-text-center" },
+        { "name": "Right", "value": "layout-text-right" }
+      ]
+    },
+    {
+      "component": "select",
+      "name": "classes_layoutsize",
+      "label": "Layout: Text size",
+      "valueType": "string",
+      "value": "",
+      "options": [
+        { "name": "Default", "value": "" },
+        { "name": "Small", "value": "layout-size-small" },
+        { "name": "Large", "value": "layout-size-large" },
+        { "name": "Extra large", "value": "layout-size-xlarge" }
+      ]
+    },
+    {
+      "component": "select",
+      "name": "classes_layoutspacing",
+      "label": "Layout: Space above & below",
+      "valueType": "string",
+      "value": "",
+      "options": [
+        { "name": "Default", "value": "" },
+        { "name": "None", "value": "layout-spacing-none" },
+        { "name": "Small", "value": "layout-spacing-small" },
+        { "name": "Large", "value": "layout-spacing-large" }
+      ]
+    }
+  ]
+}
