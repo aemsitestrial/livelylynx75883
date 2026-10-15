@@ -444,6 +444,29 @@ main .section > div:has(> .block.layout-spacing-small) { margin-block: 12px; }
 main .section > div:has(> .block.layout-spacing-large) { margin-block: 48px; }
 
 
+/* --- block: sizes set with the visual layout editor (scripts/layout-editor.js) --- */
+@media (width >= 900px) {
+  main .block[data-le-w] {
+    width: var(--le-w);
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  main .block[data-le-align='left'] {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  main .block[data-le-align='right'] {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  main .block[data-le-h] {
+    min-height: var(--le-h);
+  }
+}
+
 /* ==========================================
    Landing Page Template Styles
    ========================================== */
