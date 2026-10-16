@@ -170,6 +170,119 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          },
+          {
+            "name": "Centered",
+            "value": "centered"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "layout",
+        "label": "Layout: Arrange blocks",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Stacked (one under another)",
+            "value": ""
+          },
+          {
+            "name": "2 columns, side by side",
+            "value": "columns-2"
+          },
+          {
+            "name": "3 columns, side by side",
+            "value": "columns-3"
+          },
+          {
+            "name": "4 columns, side by side",
+            "value": "columns-4"
+          },
+          {
+            "name": "Narrow left + wide right",
+            "value": "columns-1-2"
+          },
+          {
+            "name": "Wide left + narrow right",
+            "value": "columns-2-1"
+          }
+        ],
+        "description": "Puts the blocks in this section next to each other (stacks on mobile)"
+      },
+      {
+        "component": "select",
+        "name": "gap",
+        "label": "Layout: Gap between blocks",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "name": "Large",
+            "value": "large"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "width",
+        "label": "Layout: Section width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "narrow"
+          },
+          {
+            "name": "Wide",
+            "value": "wide"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "spacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "name": "Large",
+            "value": "large"
           }
         ]
       }
@@ -177,7 +290,130 @@
   },
   {
     "id": "airline",
-    "fields": []
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "article-meta",
@@ -206,6 +442,128 @@
         "name": "tags",
         "label": "Tags",
         "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -244,6 +602,128 @@
         "validation": {
           "rootPath": "/content/experience-fragments/your-site"
         }
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -287,6 +767,128 @@
         "component": "text",
         "name": "linkText",
         "label": "Button Text"
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -312,6 +914,128 @@
         "name": "category",
         "label": "Filter by category (optional)",
         "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -450,6 +1174,128 @@
             "value": "text-cta"
           }
         ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -501,6 +1347,128 @@
             "value": "right"
           }
         ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -524,6 +1492,397 @@
           {
             "name": "Text + CTA",
             "value": "text-cta"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "destination-showcase",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "gallery",
+        "label": "Gallery Images",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "content_eyebrow",
+        "label": "Eyebrow"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "content_title",
+        "label": "Title"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "buttonText",
+        "label": "Button Text",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "button",
+        "label": "Button Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "reverse",
+        "label": "Reverse Layout",
+        "value": "false"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "backgroundStyle",
+        "label": "Background Style",
+        "value": "light"
+      }
+    ]
+  },
+  {
+    "id": "form-builder",
+    "fields": [
+        "component": "select",
+        "valueType": "string",
+        "name": "content_titleType",
+        "label": "Title Type",
+        "options": [
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "content_highlights",
+        "label": "Highlights (tags)",
+        "multi": true
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content_description",
+        "label": "Description"
+      },
+      {
+        "component": "container",
+        "name": "ctas",
+        "label": "Buttons",
+        "multi": true,
+        "fields": [
+          {
+            "component": "aem-content",
+            "valueType": "string",
+            "name": "link",
+            "label": "Link"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "linkText",
+            "label": "Button label"
+          },
+          {
+            "component": "select",
+            "valueType": "string",
+            "name": "linkType",
+            "label": "Style",
+            "options": [
+              {
+                "name": "default",
+                "value": ""
+              },
+              {
+                "name": "primary",
+                "value": "primary"
+              },
+              {
+                "name": "secondary",
+                "value": "secondary"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "classes_theme",
+        "label": "Theme",
+        "options": [
+          {
+            "name": "Light",
+            "value": "light"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
           }
         ]
       }
@@ -570,6 +1929,128 @@
             "value": "text"
           }
         ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -580,6 +2061,128 @@
         "component": "text",
         "name": "buttonLabel",
         "label": "Button Label (optional)"
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -590,6 +2193,128 @@
         "component": "text",
         "name": "buttonLabel",
         "label": "Submit Button Label(Optional)"
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -634,6 +2359,128 @@
             "value": "hybrid"
           }
         ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -672,6 +2519,128 @@
             "valueType": "boolean"
           }
         ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -701,37 +2670,132 @@
       },
       {
         "component": "richtext",
-        "valueType": "string",
         "name": "description",
         "label": "Description",
-        "value": ""
+        "value": "",
+        "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
         "valueType": "string",
-        "name": "buttonText",
-        "label": "Button Text",
-        "value": ""
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
       },
       {
-        "component": "aem-content",
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
         "valueType": "string",
-        "name": "button",
-        "label": "Button Link"
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
       },
       {
-        "component": "text",
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
         "valueType": "string",
-        "name": "reverse",
-        "label": "Reverse Layout",
-        "value": "false"
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
       },
       {
-        "component": "text",
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
         "valueType": "string",
-        "name": "backgroundStyle",
-        "label": "Background Style",
-        "value": "light"
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -739,42 +2803,169 @@
     "id": "form-builder",
     "fields": [
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "label": "Form Title"
-      },
-      {
         "component": "richtext",
         "valueType": "string",
-        "name": "description",
+        "name": "intro",
         "value": "",
-        "label": "Description"
+        "label": "Intro (form heading and description)"
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "buttonLabel",
-        "label": "Submit Button Label"
+        "label": "Submit button label"
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "actionUrl",
-        "label": "Form Action URL (where submissions are sent)"
+        "label": "Form action URL (where submissions are sent)"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_boxed",
+        "label": "Boxed (card style)"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_compact",
+        "label": "Compact spacing"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_fullwidth",
+        "label": "Full width (no max width)"
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
   {
-    "id": "form-field",
+    "id": "form-input",
     "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "label",
-        "label": "Field label",
-        "required": true
-      },
       {
         "component": "select",
         "valueType": "string",
@@ -803,11 +2994,94 @@
             "value": "date"
           },
           {
-            "name": "Textarea",
-            "value": "textarea"
+            "name": "Time",
+            "value": "time"
           },
           {
-            "name": "Dropdown (select)",
+            "name": "Date & time",
+            "value": "datetime-local"
+          },
+          {
+            "name": "Month",
+            "value": "month"
+          },
+          {
+            "name": "URL",
+            "value": "url"
+          },
+          {
+            "name": "Password",
+            "value": "password"
+          },
+          {
+            "name": "Colour",
+            "value": "color"
+          },
+          {
+            "name": "Range slider",
+            "value": "range"
+          },
+          {
+            "name": "Hidden value",
+            "value": "hidden"
+          },
+          {
+            "name": "Long answer (textarea)",
+            "value": "textarea"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "label": "Label",
+        "required": true
+      },
+      {
+        "component": "textarea",
+        "valueType": "string",
+        "name": "details",
+        "label": "Settings - one per line as key: value. Keys: name, placeholder, help, default, pattern, min, max, step, minlength, maxlength, rows, autocomplete, error"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_required",
+        "label": "Required"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_half",
+        "label": "Half width"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_third",
+        "label": "One third width"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_readonly",
+        "label": "Read only"
+      }
+    ]
+  },
+  {
+    "id": "form-choice",
+    "fields": [
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "type",
+        "label": "Field type",
+        "value": "select",
+        "options": [
+          {
+            "name": "Dropdown",
             "value": "select"
           },
           {
@@ -815,22 +3089,228 @@
             "value": "radio"
           },
           {
-            "name": "Checkbox",
-            "value": "checkbox"
+            "name": "Checkbox group",
+            "value": "checkbox-group"
           }
         ]
       },
       {
         "component": "text",
         "valueType": "string",
+        "name": "label",
+        "label": "Label",
+        "required": true
+      },
+      {
+        "component": "textarea",
+        "valueType": "string",
         "name": "options",
-        "label": "Options / default value - comma-separated list for Dropdown & Radio (mark the default by starting it with *); for other field types just enter the default value here"
+        "label": "Options - one per line. Use * to mark the default, and value | Label for a different submitted value. Settings start with @, e.g. @help: Pick one, @name: country, @placeholder: Choose..., @error: Please choose"
       },
       {
         "component": "boolean",
         "valueType": "boolean",
-        "name": "required",
-        "label": "Required field"
+        "name": "classes_required",
+        "label": "Required"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_half",
+        "label": "Half width"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_inline",
+        "label": "Show options inline (radio / checkbox group)"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_multiple",
+        "label": "Allow multiple selections (dropdown)"
+      }
+    ]
+  },
+  {
+    "id": "form-consent",
+    "fields": [
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "type",
+        "label": "Field type",
+        "value": "checkbox",
+        "options": [
+          {
+            "name": "Checkbox",
+            "value": "checkbox"
+          },
+          {
+            "name": "Toggle switch",
+            "value": "switch"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "label",
+        "value": "",
+        "label": "Label (links allowed, e.g. I accept the terms)"
+      },
+      {
+        "component": "textarea",
+        "valueType": "string",
+        "name": "details",
+        "label": "Settings - one per line as key: value. Keys: name, help, value, error"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_required",
+        "label": "Required"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_checked",
+        "label": "Checked by default"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_half",
+        "label": "Half width"
+      }
+    ]
+  },
+  {
+    "id": "form-file",
+    "fields": [
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "type",
+        "label": "Field type",
+        "value": "file",
+        "options": [
+          {
+            "name": "File upload",
+            "value": "file"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "label": "Label",
+        "required": true
+      },
+      {
+        "component": "textarea",
+        "valueType": "string",
+        "name": "details",
+        "label": "Settings - one per line as key: value. Keys: name, accept (e.g. .pdf,image/*), maxsize (MB), help, error"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_required",
+        "label": "Required"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_multiple",
+        "label": "Allow multiple files"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "classes_half",
+        "label": "Half width"
+      }
+    ]
+  },
+  {
+    "id": "form-section",
+    "fields": [
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "type",
+        "label": "Element type",
+        "value": "section",
+        "options": [
+          {
+            "name": "Section (fieldset + legend)",
+            "value": "section"
+          },
+          {
+            "name": "Heading",
+            "value": "heading"
+          },
+          {
+            "name": "Note / paragraph",
+            "value": "note"
+          },
+          {
+            "name": "Divider",
+            "value": "divider"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading / legend"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "body",
+        "value": "",
+        "label": "Text (optional)"
+      }
+    ]
+  },
+  {
+    "id": "form-settings",
+    "fields": [
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "type",
+        "label": "Element type",
+        "value": "settings",
+        "options": [
+          {
+            "name": "Form settings",
+            "value": "settings"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "successMessage",
+        "label": "Success message"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "redirectUrl",
+        "label": "Redirect URL after success (optional)"
+      },
+      {
+        "component": "textarea",
+        "valueType": "string",
+        "name": "details",
+        "label": "Settings - one per line as key: value. Keys: format (json | form), method (post | get), error (message shown when sending fails), sending (button text while sending), reset (true | false)"
       }
     ]
   },
@@ -841,6 +3321,128 @@
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -870,6 +3472,128 @@
         "valueType": "string",
         "name": "copyright",
         "label": "Copyright Text"
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -896,6 +3620,128 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -945,6 +3791,128 @@
             "name": "caption",
             "label": "Caption",
             "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
           }
         ]
       }
@@ -1024,6 +3992,128 @@
             "value": "api"
           }
         ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -1057,12 +4147,257 @@
         "name": "button",
         "label": "CTA Button",
         "value": ""
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
   {
     "id": "product-catalog",
-    "fields": []
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "product-feature",
@@ -1115,6 +4450,128 @@
             "value": "mobile"
           }
         ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -1157,6 +4614,128 @@
           {
             "name": "Accent",
             "value": "accent"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
           }
         ]
       }
@@ -1236,6 +4815,128 @@
         "name": "classes_badge",
         "label": "Show badge",
         "valueType": "boolean"
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -1290,6 +4991,128 @@
         "name": "button",
         "label": "Button",
         "value": ""
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -1305,6 +5128,128 @@
           {
             "name": "Default",
             "value": ""
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
           }
         ]
       }
@@ -1379,6 +5324,128 @@
             "valueType": "string"
           }
         ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -1418,6 +5485,128 @@
         "label": "Role / Company",
         "value": "",
         "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -1448,6 +5637,128 @@
         "valueType": "string",
         "name": "actionUrl",
         "label": "Form Action URL (where submissions are sent)"
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   },
@@ -1474,6 +5785,514 @@
         "valueType": "string",
         "value": "article-page",
         "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "brand-footer",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "molecular-footer",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "slider",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes_layoutwidth",
+        "label": "Layout: Width",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Narrow",
+            "value": "layout-width-narrow"
+          },
+          {
+            "name": "Medium",
+            "value": "layout-width-medium"
+          },
+          {
+            "name": "Full bleed (edge to edge)",
+            "value": "layout-width-full"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutposition",
+        "label": "Layout: Position",
+        "description": "Where a Narrow or Medium block sits inside its section",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Center",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-position-left"
+          },
+          {
+            "name": "Right",
+            "value": "layout-position-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layouttext",
+        "label": "Layout: Text alignment",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Left",
+            "value": "layout-text-left"
+          },
+          {
+            "name": "Center",
+            "value": "layout-text-center"
+          },
+          {
+            "name": "Right",
+            "value": "layout-text-right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutsize",
+        "label": "Layout: Text size",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Small",
+            "value": "layout-size-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-size-large"
+          },
+          {
+            "name": "Extra large",
+            "value": "layout-size-xlarge"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_layoutspacing",
+        "label": "Layout: Space above & below",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "None",
+            "value": "layout-spacing-none"
+          },
+          {
+            "name": "Small",
+            "value": "layout-spacing-small"
+          },
+          {
+            "name": "Large",
+            "value": "layout-spacing-large"
+          }
+        ]
       }
     ]
   }

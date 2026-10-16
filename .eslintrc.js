@@ -22,5 +22,7 @@ module.exports = {
       card: 6,
       'feature-spotlight': 8,
     }],
+    // every block gets one extra cell for the shared layout controls (models/_layout.json)
+    'xwalk/max-cells': ['error', { '*': 5, card: 6, section: 8 }],
   },
 };

@@ -17,15 +17,288 @@
       }
     },
     {
-      "title": "Form Field",
-      "id": "form-field",
+      "title": "Short answer (text)",
+      "id": "form-text",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
-              "name": "Form Field",
-              "model": "form-field"
+              "name": "Short answer (text)",
+              "model": "form-input",
+              "type": "text"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Email",
+      "id": "form-email",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Email",
+              "model": "form-input",
+              "type": "email"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Phone",
+      "id": "form-phone",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Phone",
+              "model": "form-input",
+              "type": "tel"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Number",
+      "id": "form-number",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Number",
+              "model": "form-input",
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Date",
+      "id": "form-date",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Date",
+              "model": "form-input",
+              "type": "date"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Long answer (textarea)",
+      "id": "form-textarea",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Long answer (textarea)",
+              "model": "form-input",
+              "type": "textarea"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Other input (url, password, time, range...)",
+      "id": "form-input",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Other input (url, password, time, range...)",
+              "model": "form-input",
+              "type": "url"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Dropdown",
+      "id": "form-dropdown",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Dropdown",
+              "model": "form-choice",
+              "type": "select"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Radio buttons",
+      "id": "form-radio",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Radio buttons",
+              "model": "form-choice",
+              "type": "radio"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Checkbox group",
+      "id": "form-checkboxes",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Checkbox group",
+              "model": "form-choice",
+              "type": "checkbox-group"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Single checkbox / consent",
+      "id": "form-checkbox",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Single checkbox / consent",
+              "model": "form-consent",
+              "type": "checkbox"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Toggle switch",
+      "id": "form-switch",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Toggle switch",
+              "model": "form-consent",
+              "type": "switch"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "File upload",
+      "id": "form-file",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "File upload",
+              "model": "form-file",
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Section (fieldset + legend)",
+      "id": "form-section",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Section (fieldset + legend)",
+              "model": "form-section",
+              "type": "section"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Heading",
+      "id": "form-heading",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Heading",
+              "model": "form-section",
+              "type": "heading"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Note / paragraph",
+      "id": "form-note",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Note / paragraph",
+              "model": "form-section",
+              "type": "note"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Divider",
+      "id": "form-divider",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Divider",
+              "model": "form-section",
+              "type": "divider"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Form settings (success message, redirect...)",
+      "id": "form-settings",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Form settings (success message, redirect...)",
+              "model": "form-settings",
+              "type": "settings"
             }
           }
         }
@@ -37,42 +310,47 @@
       "id": "form-builder",
       "fields": [
         {
-          "component": "text",
-          "valueType": "string",
-          "name": "title",
-          "label": "Form Title"
-        },
-        {
           "component": "richtext",
           "valueType": "string",
-          "name": "description",
+          "name": "intro",
           "value": "",
-          "label": "Description"
+          "label": "Intro (form heading and description)"
         },
         {
           "component": "text",
           "valueType": "string",
           "name": "buttonLabel",
-          "label": "Submit Button Label"
+          "label": "Submit button label"
         },
         {
           "component": "text",
           "valueType": "string",
           "name": "actionUrl",
-          "label": "Form Action URL (where submissions are sent)"
+          "label": "Form action URL (where submissions are sent)"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_boxed",
+          "label": "Boxed (card style)"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_compact",
+          "label": "Compact spacing"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_fullwidth",
+          "label": "Full width (no max width)"
         }
       ]
     },
     {
-      "id": "form-field",
+      "id": "form-input",
       "fields": [
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "label",
-          "label": "Field label",
-          "required": true
-        },
         {
           "component": "select",
           "valueType": "string",
@@ -80,28 +358,344 @@
           "label": "Field type",
           "value": "text",
           "options": [
-            { "name": "Text", "value": "text" },
-            { "name": "Email", "value": "email" },
-            { "name": "Phone", "value": "tel" },
-            { "name": "Number", "value": "number" },
-            { "name": "Date", "value": "date" },
-            { "name": "Textarea", "value": "textarea" },
-            { "name": "Dropdown (select)", "value": "select" },
-            { "name": "Radio buttons", "value": "radio" },
-            { "name": "Checkbox", "value": "checkbox" }
+            {
+              "name": "Text",
+              "value": "text"
+            },
+            {
+              "name": "Email",
+              "value": "email"
+            },
+            {
+              "name": "Phone",
+              "value": "tel"
+            },
+            {
+              "name": "Number",
+              "value": "number"
+            },
+            {
+              "name": "Date",
+              "value": "date"
+            },
+            {
+              "name": "Time",
+              "value": "time"
+            },
+            {
+              "name": "Date & time",
+              "value": "datetime-local"
+            },
+            {
+              "name": "Month",
+              "value": "month"
+            },
+            {
+              "name": "URL",
+              "value": "url"
+            },
+            {
+              "name": "Password",
+              "value": "password"
+            },
+            {
+              "name": "Colour",
+              "value": "color"
+            },
+            {
+              "name": "Range slider",
+              "value": "range"
+            },
+            {
+              "name": "Hidden value",
+              "value": "hidden"
+            },
+            {
+              "name": "Long answer (textarea)",
+              "value": "textarea"
+            }
           ]
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "options",
-          "label": "Options / default value - comma-separated list for Dropdown & Radio (mark the default by starting it with *); for other field types just enter the default value here"
+          "name": "label",
+          "label": "Label",
+          "required": true
+        },
+        {
+          "component": "textarea",
+          "valueType": "string",
+          "name": "details",
+          "label": "Settings - one per line as key: value. Keys: name, placeholder, help, default, pattern, min, max, step, minlength, maxlength, rows, autocomplete, error"
         },
         {
           "component": "boolean",
           "valueType": "boolean",
-          "name": "required",
-          "label": "Required field"
+          "name": "classes_required",
+          "label": "Required"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_half",
+          "label": "Half width"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_third",
+          "label": "One third width"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_readonly",
+          "label": "Read only"
+        }
+      ]
+    },
+    {
+      "id": "form-choice",
+      "fields": [
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "type",
+          "label": "Field type",
+          "value": "select",
+          "options": [
+            {
+              "name": "Dropdown",
+              "value": "select"
+            },
+            {
+              "name": "Radio buttons",
+              "value": "radio"
+            },
+            {
+              "name": "Checkbox group",
+              "value": "checkbox-group"
+            }
+          ]
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "label",
+          "label": "Label",
+          "required": true
+        },
+        {
+          "component": "textarea",
+          "valueType": "string",
+          "name": "options",
+          "label": "Options - one per line. Use * to mark the default, and value | Label for a different submitted value. Settings start with @, e.g. @help: Pick one, @name: country, @placeholder: Choose..., @error: Please choose"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_required",
+          "label": "Required"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_half",
+          "label": "Half width"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_inline",
+          "label": "Show options inline (radio / checkbox group)"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_multiple",
+          "label": "Allow multiple selections (dropdown)"
+        }
+      ]
+    },
+    {
+      "id": "form-consent",
+      "fields": [
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "type",
+          "label": "Field type",
+          "value": "checkbox",
+          "options": [
+            {
+              "name": "Checkbox",
+              "value": "checkbox"
+            },
+            {
+              "name": "Toggle switch",
+              "value": "switch"
+            }
+          ]
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "label",
+          "value": "",
+          "label": "Label (links allowed, e.g. I accept the terms)"
+        },
+        {
+          "component": "textarea",
+          "valueType": "string",
+          "name": "details",
+          "label": "Settings - one per line as key: value. Keys: name, help, value, error"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_required",
+          "label": "Required"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_checked",
+          "label": "Checked by default"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_half",
+          "label": "Half width"
+        }
+      ]
+    },
+    {
+      "id": "form-file",
+      "fields": [
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "type",
+          "label": "Field type",
+          "value": "file",
+          "options": [
+            {
+              "name": "File upload",
+              "value": "file"
+            }
+          ]
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "label",
+          "label": "Label",
+          "required": true
+        },
+        {
+          "component": "textarea",
+          "valueType": "string",
+          "name": "details",
+          "label": "Settings - one per line as key: value. Keys: name, accept (e.g. .pdf,image/*), maxsize (MB), help, error"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_required",
+          "label": "Required"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_multiple",
+          "label": "Allow multiple files"
+        },
+        {
+          "component": "boolean",
+          "valueType": "boolean",
+          "name": "classes_half",
+          "label": "Half width"
+        }
+      ]
+    },
+    {
+      "id": "form-section",
+      "fields": [
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "type",
+          "label": "Element type",
+          "value": "section",
+          "options": [
+            {
+              "name": "Section (fieldset + legend)",
+              "value": "section"
+            },
+            {
+              "name": "Heading",
+              "value": "heading"
+            },
+            {
+              "name": "Note / paragraph",
+              "value": "note"
+            },
+            {
+              "name": "Divider",
+              "value": "divider"
+            }
+          ]
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "heading",
+          "label": "Heading / legend"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "body",
+          "value": "",
+          "label": "Text (optional)"
+        }
+      ]
+    },
+    {
+      "id": "form-settings",
+      "fields": [
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "type",
+          "label": "Element type",
+          "value": "settings",
+          "options": [
+            {
+              "name": "Form settings",
+              "value": "settings"
+            }
+          ]
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "successMessage",
+          "label": "Success message"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "redirectUrl",
+          "label": "Redirect URL after success (optional)"
+        },
+        {
+          "component": "textarea",
+          "valueType": "string",
+          "name": "details",
+          "label": "Settings - one per line as key: value. Keys: format (json | form), method (post | get), error (message shown when sending fails), sending (button text while sending), reset (true | false)"
         }
       ]
     }
@@ -110,7 +704,24 @@
     {
       "id": "form-builder",
       "components": [
-        "form-field"
+        "form-text",
+        "form-email",
+        "form-phone",
+        "form-number",
+        "form-date",
+        "form-textarea",
+        "form-input",
+        "form-dropdown",
+        "form-radio",
+        "form-checkboxes",
+        "form-checkbox",
+        "form-switch",
+        "form-file",
+        "form-section",
+        "form-heading",
+        "form-note",
+        "form-divider",
+        "form-settings"
       ]
     }
   ]

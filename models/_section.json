@@ -33,6 +33,119 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "Dark",
+              "value": "dark"
+            },
+            {
+              "name": "Centered",
+              "value": "centered"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "layout",
+          "label": "Layout: Arrange blocks",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Stacked (one under another)",
+              "value": ""
+            },
+            {
+              "name": "2 columns, side by side",
+              "value": "columns-2"
+            },
+            {
+              "name": "3 columns, side by side",
+              "value": "columns-3"
+            },
+            {
+              "name": "4 columns, side by side",
+              "value": "columns-4"
+            },
+            {
+              "name": "Narrow left + wide right",
+              "value": "columns-1-2"
+            },
+            {
+              "name": "Wide left + narrow right",
+              "value": "columns-2-1"
+            }
+          ],
+          "description": "Puts the blocks in this section next to each other (stacks on mobile)"
+        },
+        {
+          "component": "select",
+          "name": "gap",
+          "label": "Layout: Gap between blocks",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Default",
+              "value": ""
+            },
+            {
+              "name": "Small",
+              "value": "small"
+            },
+            {
+              "name": "Large",
+              "value": "large"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "width",
+          "label": "Layout: Section width",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Default",
+              "value": ""
+            },
+            {
+              "name": "Narrow",
+              "value": "narrow"
+            },
+            {
+              "name": "Wide",
+              "value": "wide"
+            },
+            {
+              "name": "Full bleed (edge to edge)",
+              "value": "full"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "spacing",
+          "label": "Layout: Space above & below",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Default",
+              "value": ""
+            },
+            {
+              "name": "None",
+              "value": "none"
+            },
+            {
+              "name": "Small",
+              "value": "small"
+            },
+            {
+              "name": "Large",
+              "value": "large"
             }
           ]
         }
@@ -82,6 +195,7 @@
         "spotlight",
         "product-card",
         "promo-card",
+        "destination-showcase",
         "airline"
       ]
     }
