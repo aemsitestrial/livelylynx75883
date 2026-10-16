@@ -97,6 +97,13 @@ function buildAutoBlocks(main) {
   }
 }
 
+function decorateSectionBackgrounds(main) {
+  main.querySelectorAll('.section[data-background]').forEach((section) => {
+    const url = section.dataset.background;
+    if (url) section.style.backgroundImage = `url('${url}')`;
+  });
+}
+
 /**
  * Decorates the main element.
  * @param {Element} main The main element
@@ -109,6 +116,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  decorateSectionBackgrounds(main);
 }
 
 /**
@@ -142,6 +150,8 @@ async function loadEager(doc) {
 async function loadLazy(doc) {
   const main = doc.querySelector('main');
   await loadSections(main);
+  // applies saved layouts and starts the visual layout editor (?layout-edit=on)
+  import('./layout-editor.js').then((m) => m.default(main));
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;

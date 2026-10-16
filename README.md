@@ -40,3 +40,22 @@ npm run lint
 1. Install the [AEM CLI](https://github.com/adobe/helix-cli): `npm install -g @adobe/aem-cli`
 1. Start AEM Proxy: `aem up` (opens your browser at `http://localhost:3000`)
 1. Open the `{repo}` directory in your favorite IDE and start coding :)
+
+## Layout controls
+
+Every block and every section has "Layout" fields in the Universal Editor properties panel.
+
+- **Section**: arrange blocks side by side (2/3/4 columns, 1:2, 2:1), gap, section width, spacing.
+- **Block**: width (narrow / medium / full bleed), position, text alignment, text size, space above & below.
+
+The fields are defined once in `models/_layout.json` and added to every block model by `scripts/apply-layout-fields.mjs` (part of `npm run build:json`), so new blocks get them automatically. The styles are at the end of the "Layout controls" section in `styles/styles.css`.
+
+### Visual layout editor (drag & resize)
+
+Add `?layout-edit=on` to any page URL (preview or local, desktop width). Click a block, then:
+
+- drag its edges or corners to resize (width in % of the section, height in px)
+- drag **Move** to reorder it, including into other sections
+- use the toolbar to align it left / center / right, or give its section 1-4 columns
+
+Changes are saved as a draft in your browser. Click **Download layout-overrides.json**, replace `layout-overrides.json` in the repo root with it and commit, so every visitor sees the layout. `?layout-edit=off` closes the editor. Code: `scripts/layout-editor.js`, `styles/layout-editor.css`.

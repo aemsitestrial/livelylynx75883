@@ -24,7 +24,7 @@
   ],
   "filters": [
     {
-      "id": "section",
+      "id": "airline",
       "components": [
         "airline"
       ]
