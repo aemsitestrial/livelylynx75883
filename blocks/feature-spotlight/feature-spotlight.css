@@ -145,4 +145,24 @@
   .feature-spotlight .feature-description {
     font-size: 16px;
   }
+
+  .feature-spotlight.background-light {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+.feature-spotlight.background-dark {
+  background-color: #222;
+  color: #fff;
+}
+
+.feature-spotlight.background-dark .feature-tag {
+  background-color: #444;
+  color: #fff;
+}
+
+.feature-spotlight.background-dark .feature-button {
+  background-color: #fff;
+  color: #222;
+}
 }
