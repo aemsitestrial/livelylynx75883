@@ -119,6 +119,21 @@ export function decorateMain(main) {
   decorateSectionBackgrounds(main);
 }
 
+async function loadPromo(main) {
+  if (window.location.pathname.startsWith('/fragment')) return;
+
+  const resp = await fetch('/fragment/promo.plain.html');
+  if (!resp.ok) return;
+
+  const wrapper = document.createElement('main');
+  wrapper.innerHTML = await resp.text();
+  decorateMain(wrapper);
+  await loadSections(wrapper);
+
+  const section = wrapper.querySelector(':scope .section');
+  if (section) main.prepend(section);
+}
+
 /**
  * Loads everything needed to get to LCP.
  * @param {Element} doc The container element
@@ -129,6 +144,7 @@ async function loadEager(doc) {
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
+    await loadPromo(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
   }

@@ -5,21 +5,22 @@ export default function decorate(block) {
   const tagRow = rows[1];
   const headingRow = rows[2];
   const descriptionRow = rows[3];
-  const buttonRow = rows[4];
-  const reverseRow = rows[5];
+  const buttonTextRow = rows[4];
+  const buttonLinkRow = rows[5];
+  const reverseRow = rows[6];
+  const backgroundRow = rows[7];
 
   const image = imageRow?.querySelector('picture, img');
-
   const tag = tagRow?.textContent.trim();
   const heading = headingRow?.textContent.trim();
-
   const description = descriptionRow?.innerHTML;
 
-  const buttonLink = buttonRow?.querySelector('a');
-  const buttonText = buttonLink?.textContent.trim();
+  const buttonText = buttonTextRow?.textContent.trim();
+  const buttonLink = buttonLinkRow?.querySelector('a');
   const buttonHref = buttonLink?.href;
 
   const reverse = reverseRow?.textContent.trim().toLowerCase() === 'true';
+  const background = backgroundRow?.textContent.trim().toLowerCase();
 
   block.innerHTML = '';
 
@@ -33,7 +34,11 @@ export default function decorate(block) {
     section.classList.add('reverse');
   }
 
-  /* Image */
+  if (background) {
+    section.classList.add(`background-${background}`);
+  }
+
+  // Image
   const imageContainer = document.createElement('div');
   imageContainer.className = 'feature-image';
 
@@ -47,7 +52,7 @@ export default function decorate(block) {
     }
   }
 
-  /* Content */
+  // Content
   const content = document.createElement('div');
   content.className = 'feature-content';
 
@@ -71,13 +76,11 @@ export default function decorate(block) {
     content.appendChild(descriptionElement);
   }
 
-  if (buttonLink && buttonText && buttonHref) {
+  if (buttonText && buttonHref) {
     const button = document.createElement('a');
-
     button.className = 'feature-button';
     button.href = buttonHref;
     button.textContent = buttonText;
-
     content.appendChild(button);
   }
 
