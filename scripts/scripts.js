@@ -119,17 +119,18 @@ export function decorateMain(main) {
   decorateSectionBackgrounds(main);
 }
 
-
 async function loadPromo(main) {
   if (window.location.pathname.startsWith('/fragment')) return;
 
-  const { loadFragment } = await import('.../blocks/fragment/fragment.js');
+  const resp = await fetch('/fragment/promo.plain.html');
+  if (!resp.ok) return;
 
-  const fragment = await loadFragment('/fragment/promo');
+  const wrapper = document.createElement('main');
+  wrapper.innerHTML = await resp.text();
+  decorateMain(wrapper);
+  await loadSections(wrapper);
 
-  if (!fragment) return;
-
-  const section = fragment.querySelector(":scope .section");
+  const section = wrapper.querySelector(':scope .section');
   if (section) main.prepend(section);
 }
 
