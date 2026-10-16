@@ -701,10 +701,37 @@
       },
       {
         "component": "richtext",
+        "valueType": "string",
         "name": "description",
         "label": "Description",
-        "value": "",
-        "valueType": "string"
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "buttonText",
+        "label": "Button Text",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "button",
+        "label": "Button Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "reverse",
+        "label": "Reverse Layout",
+        "value": "false"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "backgroundStyle",
+        "label": "Background Style",
+        "value": "light"
       }
     ]
   },
